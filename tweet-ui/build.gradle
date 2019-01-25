@@ -51,11 +51,6 @@ android {
         test.java.srcDirs += "build/generated/source/r/debug"
         test.java.srcDirs += "src/debug"
     }
-
-    testOptions {
-        unitTests.returnDefaultValues = true
-        unitTests.includeAndroidResources true
-    }
 }
 
 dependencies {
