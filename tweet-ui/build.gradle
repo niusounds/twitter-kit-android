@@ -18,12 +18,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.compileSdkVersion
+    compileSdkVersion 28
 
     defaultConfig {
         versionCode 1
         versionName version
-        minSdkVersion rootProject.minSdkVersion
+        minSdkVersion 21
         consumerProguardFiles 'proguard.txt'
     }
 
@@ -44,12 +44,6 @@ android {
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
-    }
-
-    // Forcibly add debug and the generated "R" files onto the test classpath
-    sourceSets {
-        test.java.srcDirs += "build/generated/source/r/debug"
-        test.java.srcDirs += "src/debug"
     }
 }
 

@@ -18,13 +18,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.compileSdkVersion
+    compileSdkVersion 28
 
 
     defaultConfig {
         versionCode 1
         versionName version
-        minSdkVersion rootProject.minSdkVersion
+        minSdkVersion 21
         consumerProguardFiles 'proguard.txt'
     }
 

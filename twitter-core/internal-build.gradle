@@ -40,7 +40,6 @@ android {
             buildConfigField "String", "BUILD_NUMBER", "\"${buildNumber}\""
             buildConfigField "long", "BUILD_TIME", "${System.currentTimeMillis()}L"
 
-            testCoverageEnabled enableTestCodeCoverage
         }
 
         release {
@@ -50,19 +49,6 @@ android {
             buildConfigField "long", "BUILD_TIME", "${System.currentTimeMillis()}L"
         }
     }
-
-    lintOptions {
-        warningsAsErrors true
-    }
-
-    dexMethodCount {
-        packageFilter = "com.twitter.sdk.android.core"
-    }
-
-    //Gradle publishes only release by default for multi module projects
-    //This will publish all build variants and we can specifically choose them
-    defaultPublishConfig 'release'
-    publishNonDefault true
 
     compileOptions {
         sourceCompatibility rootProject.sourceCompatibilityVersion

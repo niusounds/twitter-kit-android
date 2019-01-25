@@ -15,17 +15,14 @@
  *
  */
 
-apply from: rootProject.file('dependencies.gradle')
-
 subprojects { Project subproject ->
     buildscript {
         repositories {
             google()
             jcenter()
-            maven { url 'https://maven.fabric.io/public' }
         }
         dependencies {
-            classpath dependency.androidGradlePlugin
+            classpath 'com.android.tools.build:gradle:3.0.0'
         }
     }
 
