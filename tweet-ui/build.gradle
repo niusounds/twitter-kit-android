@@ -48,11 +48,11 @@ android {
 }
 
 dependencies {
-    compile project(':twitter-core')
+    api project(':twitter-core')
 
-    compile 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
-    compile "com.google.android.material:material:1.0.0"
-    compile "androidx.appcompat:appcompat:1.0.2"
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "androidx.appcompat:appcompat:1.0.2"
 
 }
