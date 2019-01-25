@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/makarenkoanton/twitter-kit-android.svg)](https://jitpack.io/#makarenkoanton/twitter-kit-android)
+
 # Twitter Kit for Android
 
 Twitter Kit is a multi-module gradle project containing several Twitter SDKs including TweetComposer, TwitterCore, and TweetUi. Twitter Kit is designed to make interacting with Twitter seamless and efficient.
