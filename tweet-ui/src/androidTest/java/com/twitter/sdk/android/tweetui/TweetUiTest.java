@@ -30,6 +30,7 @@ import static org.mockito.Mockito.mock;
 
 public class TweetUiTest extends AndroidTestCase {
     private TweetUi tweetUi;
+
     @Override
     protected void setUp() throws Exception {
         super.setUp();

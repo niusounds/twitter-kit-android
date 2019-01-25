@@ -31,15 +31,15 @@ public class OAuth1aHeaders {
      * Gets authorization header for inclusion in HTTP request headers.
      *
      * @param authConfig The auth config.
-     * @param authToken The auth token to use to sign the request.
-     * @param callback The callback url.
-     * @param method The HTTP method.
-     * @param url The url.
+     * @param authToken  The auth token to use to sign the request.
+     * @param callback   The callback url.
+     * @param method     The HTTP method.
+     * @param url        The url.
      * @param postParams The post parameters.
      */
     public String getAuthorizationHeader(TwitterAuthConfig authConfig,
-            TwitterAuthToken authToken, String callback, String method, String url,
-            Map<String, String> postParams) {
+                                         TwitterAuthToken authToken, String callback, String method, String url,
+                                         Map<String, String> postParams) {
         final OAuth1aParameters oAuth1aParameters = getOAuth1aParameters(authConfig, authToken,
                 callback, method, url, postParams);
         return oAuth1aParameters.getAuthorizationHeader();
@@ -56,8 +56,8 @@ public class OAuth1aHeaders {
      * @return A map of OAuth Echo headers
      */
     public Map<String, String> getOAuthEchoHeaders(TwitterAuthConfig authConfig,
-            TwitterAuthToken authToken, String callback, String method, String url,
-            Map<String, String> postParams) {
+                                                   TwitterAuthToken authToken, String callback, String method, String url,
+                                                   Map<String, String> postParams) {
         final Map<String, String> headers = new HashMap<>(2);
         final String authorizationHeader = getAuthorizationHeader(authConfig, authToken,
                 callback, method, url, postParams);

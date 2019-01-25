@@ -180,6 +180,7 @@ public class TweetTimelineListAdapterTest extends TweetUiTestCase {
 
         /**
          * Constructs a FakeTweetTimeline
+         *
          * @param numItems the number of Tweets to return per call to next/previous
          */
         FakeTweetTimeline(long numItems) {
@@ -207,6 +208,7 @@ public class TweetTimelineListAdapterTest extends TweetUiTestCase {
 
     /**
      * Makes class public so it can be mocked on ART runtime.
+     *
      * @param <T>
      */
     public class TestTimelineDelegate<T extends Identifiable> extends TimelineDelegate {

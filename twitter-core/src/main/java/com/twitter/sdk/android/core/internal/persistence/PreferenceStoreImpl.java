@@ -48,6 +48,7 @@ public class PreferenceStoreImpl implements PreferenceStore {
 
     /**
      * Apply thread safe saves based on Android API level
+     *
      * @param editor
      * @return boolean success
      */

@@ -75,6 +75,7 @@ public class QuoteTweetView extends AbstractTweetView {
     /**
      * Returns the desired aspect ratio of the Tweet media entity according to "sizes" metadata
      * and the aspect ratio display rules.
+     *
      * @param photoEntity the first
      * @return the target image and bitmap width to height aspect ratio
      */

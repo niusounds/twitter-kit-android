@@ -35,7 +35,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(RobolectricTestRunner.class)
-public class AuthStateTest  {
+public class AuthStateTest {
 
     private Activity mockActivity;
     private AuthHandler mockAuthHandler;

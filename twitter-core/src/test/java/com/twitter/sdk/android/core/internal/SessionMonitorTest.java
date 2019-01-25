@@ -146,7 +146,7 @@ public class SessionMonitorTest {
     @Test
     public void testMonitorStateStartVerification_duringVerification() {
         final long startTime = TEST_TIME_1200_UTC;
-        final long now =  startTime + 9 * DateUtils.HOUR_IN_MILLIS;
+        final long now = startTime + 9 * DateUtils.HOUR_IN_MILLIS;
 
         monitorState.lastVerification = startTime;
         monitorState.verifying = true;
@@ -156,7 +156,7 @@ public class SessionMonitorTest {
     @Test
     public void testMonitorStateStartVerification_beforeTimeThreshold() {
         final long startTime = TEST_TIME_1200_UTC;
-        final long now =  startTime + DateUtils.HOUR_IN_MILLIS;
+        final long now = startTime + DateUtils.HOUR_IN_MILLIS;
 
         monitorState.lastVerification = startTime;
         monitorState.verifying = false;
@@ -166,7 +166,7 @@ public class SessionMonitorTest {
     @Test
     public void testMonitorStateStartVerification_dayChangedButBeforeThreshold() {
         final long startTime = TEST_TIME_2359_UTC;
-        final long now =  TEST_TIME_0001_UTC;
+        final long now = TEST_TIME_0001_UTC;
 
         monitorState.lastVerification = startTime;
         monitorState.verifying = false;

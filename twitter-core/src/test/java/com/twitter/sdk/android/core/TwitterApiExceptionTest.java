@@ -29,7 +29,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 @RunWith(RobolectricTestRunner.class)
-public class TwitterApiExceptionTest  {
+public class TwitterApiExceptionTest {
 
     private static final int API_ERROR_CODE = 239;
     private static final int DEFAULT_ERROR_CODE = 0;

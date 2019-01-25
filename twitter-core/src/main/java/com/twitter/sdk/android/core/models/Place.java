@@ -83,8 +83,8 @@ public class Place {
     public final String url;
 
     public Place(Map<String, String> attributes, BoundingBox boundingBox, String country,
-            String countryCode, String fullName, String id, String name, String placeType,
-            String url) {
+                 String countryCode, String fullName, String id, String name, String placeType,
+                 String url) {
         this.attributes = ModelUtils.getSafeMap(attributes);
         this.boundingBox = boundingBox;
         this.country = country;

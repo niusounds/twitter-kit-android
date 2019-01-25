@@ -46,6 +46,7 @@ abstract class BaseTimeline {
 
         /**
          * Constructs a TweetsCallback
+         *
          * @param cb A callback which expects a TimelineResult
          */
         TweetsCallback(Callback<TimelineResult<Tweet>> cb) {

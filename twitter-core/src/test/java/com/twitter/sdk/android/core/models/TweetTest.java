@@ -95,7 +95,7 @@ public class TweetTest {
         JsonReader reader = null;
         try {
             reader = new JsonReader(new InputStreamReader(testResources
-                .getAsStream("model_quoted_tweet.json")));
+                    .getAsStream("model_quoted_tweet.json")));
             final Tweet tweet = gson.fromJson(reader, Tweet.class);
             assertEquals(EXPECTED_QUOTED_STATUS_ID, tweet.quotedStatusId);
             assertEquals(String.valueOf(EXPECTED_QUOTED_STATUS_ID), tweet.quotedStatusIdStr);

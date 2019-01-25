@@ -27,7 +27,7 @@ public class GuestSessionProvider {
     private final SessionManager<GuestSession> sessionManager;
 
     public GuestSessionProvider(OAuth2Service oAuth2Service,
-            SessionManager<GuestSession> sessionManager) {
+                                SessionManager<GuestSession> sessionManager) {
         this.oAuth2Service = oAuth2Service;
         this.sessionManager = sessionManager;
     }

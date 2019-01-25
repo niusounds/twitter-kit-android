@@ -68,13 +68,13 @@ public final class ExecutorUtils {
         };
     }
 
-    static void addDelayedShutdownHook(String serviceName, ExecutorService service){
+    static void addDelayedShutdownHook(String serviceName, ExecutorService service) {
         ExecutorUtils.addDelayedShutdownHook(serviceName, service, DEFAULT_TERMINATION_TIMEOUT,
                 SECONDS);
     }
 
     static void addDelayedShutdownHook(final String serviceName,
-            final ExecutorService service, final long terminationTimeout, final TimeUnit timeUnit) {
+                                       final ExecutorService service, final long terminationTimeout, final TimeUnit timeUnit) {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 service.shutdown();

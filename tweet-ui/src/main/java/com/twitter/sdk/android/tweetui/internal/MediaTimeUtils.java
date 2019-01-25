@@ -23,7 +23,8 @@ final class MediaTimeUtils {
     private static final String TIME_FORMAT_LONG = "%1$d:%2$02d:%3$02d";
     private static final String TIME_FORMAT_SHORT = "%1$d:%2$02d";
 
-    private MediaTimeUtils() {}
+    private MediaTimeUtils() {
+    }
 
     static String getPlaybackTime(long timeMillis) {
         final int timeSeconds = (int) (timeMillis / 1000);

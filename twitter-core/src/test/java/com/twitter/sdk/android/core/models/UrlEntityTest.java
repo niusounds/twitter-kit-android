@@ -29,7 +29,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class UrlEntityTest  {
+public class UrlEntityTest {
 
     private static final String TEST_JSON
             = "{\"indices\":[32,52], \"url\":\"http:\\/\\/t.co\\/IOwBrTZR\","

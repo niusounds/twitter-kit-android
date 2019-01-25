@@ -20,7 +20,8 @@ package com.twitter.sdk.android.tweetui;
 import android.graphics.Color;
 
 final class ColorUtils {
-    private ColorUtils() {}
+    private ColorUtils() {
+    }
 
     /**
      * This method calculates a combination of colors using an opacity of the foreground layered
@@ -31,10 +32,10 @@ final class ColorUtils {
      *                     overlay color
      * @param overlayColor The foreground color that the opacity will be applied to
      * @param primaryColor The background color that the foreground color is applied to
-     * @return             The combined color value
+     * @return The combined color value
      */
     static int calculateOpacityTransform(final double opacity, final int overlayColor,
-            final int primaryColor) {
+                                         final int primaryColor) {
         final int redPrimary = Color.red(primaryColor);
         final int redOverlay = Color.red(overlayColor);
         final int greenPrimary = Color.green(primaryColor);
@@ -54,7 +55,7 @@ final class ColorUtils {
      * See: http://en.wikipedia.org/wiki/HSL_and_HSV. The threshold values are from ITU Rec. 709
      * http://en.wikipedia.org/wiki/Rec._709#Luma_coefficients
      *
-     * @param  color A color value
+     * @param color A color value
      * @return Whether or not the color is considered light
      */
     static boolean isLightColor(final int color) {

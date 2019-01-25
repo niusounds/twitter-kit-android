@@ -24,10 +24,10 @@ import android.widget.ImageButton;
 
 /**
  * Display on/off states (ie: Favorite or Retweet action buttons) as an {@link ImageButton}.
- *
+ * <p>
  * The content description for the on and off states is defined by using the
  * {@code twitter:contentDescriptionOn} and {@code twitter:contentDescriptionOff} attributes.
- *
+ * <p>
  * By default the button will be toggled when clicked. This behaviour can be prevented by setting
  * the {@code twitter:toggleOnClick} attribute to false.
  *

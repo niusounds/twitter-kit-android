@@ -28,7 +28,7 @@ import java.io.File;
 import java.util.concurrent.ExecutorService;
 
 /**
- *  The {@link Twitter} class stores common configuration and state for TwitterKit SDK.
+ * The {@link Twitter} class stores common configuration and state for TwitterKit SDK.
  */
 public class Twitter {
     public static final String TAG = "Twitter";

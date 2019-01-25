@@ -29,7 +29,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class CoordinatesTest  {
+public class CoordinatesTest {
 
     private static final String TEST_JSON = "{\n"
             + "    \"coordinates\":\n"

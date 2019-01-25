@@ -24,6 +24,7 @@ public interface Identifiable {
 
     /**
      * Returns the id.
+     *
      * @return The id.
      */
     long getId();

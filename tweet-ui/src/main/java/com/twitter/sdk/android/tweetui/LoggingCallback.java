@@ -25,6 +25,7 @@ import com.twitter.sdk.android.core.TwitterException;
  * LoggingCallback logs error messages to the logger and passes TwitterExceptions through to the
  * given Callback. Concrete subclasses must implement success(Result<T> result) and optionally call
  * cb's success with the appropriate unpacked result data.
+ *
  * @param <T> expected response type
  */
 abstract class LoggingCallback<T> extends Callback<T> {
@@ -35,7 +36,8 @@ abstract class LoggingCallback<T> extends Callback<T> {
 
     /**
      * Constructs a LoggingCallback.
-     * @param cb Wrapped Callback of any type
+     *
+     * @param cb     Wrapped Callback of any type
      * @param logger a Logger.
      */
     LoggingCallback(Callback cb, Logger logger) {

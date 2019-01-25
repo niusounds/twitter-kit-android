@@ -31,7 +31,7 @@ import okhttp3.Headers;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class TwitterRateLimitTest  {
+public class TwitterRateLimitTest {
 
     public static final String X_RATE_LIMIT_LIMIT = "x-rate-limit-limit";
     public static final String X_RATE_LIMIT_REMAINING = "x-rate-limit-remaining";

@@ -27,7 +27,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 @RunWith(RobolectricTestRunner.class)
-public class OAuth2TokenTest  {
+public class OAuth2TokenTest {
 
     private static final String TOKEN_TYPE = "tokenType";
     private static final String ACCESS_TOKEN = "accessToken";

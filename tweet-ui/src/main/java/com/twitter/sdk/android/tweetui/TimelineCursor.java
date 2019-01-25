@@ -30,6 +30,7 @@ public class TimelineCursor {
 
     /**
      * Constructs a TimelineCursor storing position and containsLastItem data.
+     *
      * @param minPosition the minimum position of items received or Null
      * @param maxPosition the maximum position of items received or Null
      */
@@ -41,6 +42,7 @@ public class TimelineCursor {
     /**
      * Constructs a TimelineCursor by reading the maxPosition from the start item and the
      * minPosition from the last item.
+     *
      * @param items items from the maxPosition item to the minPosition item
      */
     TimelineCursor(List<? extends Identifiable> items) {

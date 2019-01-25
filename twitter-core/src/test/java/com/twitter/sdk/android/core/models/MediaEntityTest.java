@@ -38,7 +38,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 @RunWith(RobolectricTestRunner.class)
-public class MediaEntityTest  {
+public class MediaEntityTest {
     private static final int TEST_INDICES_START = 117;
     private static final int TEST_INDICES_END = 139;
     private static final String TEST_URL = "http://t.co/lvYVFjAbzz";

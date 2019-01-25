@@ -52,7 +52,7 @@ public class QuoteTweetViewTest extends AbstractTweetViewTest {
 
     @Override
     QuoteTweetView createViewWithMocks(Context context, Tweet tweet,
-                                         BaseTweetView.DependencyProvider dependencyProvider) {
+                                       BaseTweetView.DependencyProvider dependencyProvider) {
         final QuoteTweetView quoteTweetView = new QuoteTweetView(context, dependencyProvider);
         quoteTweetView.setTweet(tweet);
         return quoteTweetView;

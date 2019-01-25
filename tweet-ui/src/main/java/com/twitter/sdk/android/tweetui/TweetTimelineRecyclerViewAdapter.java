@@ -19,7 +19,6 @@ package com.twitter.sdk.android.tweetui;
 
 import android.content.Context;
 import android.database.DataSetObserver;
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import com.twitter.sdk.android.core.Callback;
@@ -27,6 +26,8 @@ import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.models.Tweet;
 import com.twitter.sdk.android.core.models.TweetBuilder;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * TweetTimelineRecyclerViewAdapter is a RecyclerView adapter which can provide Timeline Tweets to
@@ -45,7 +46,7 @@ public class TweetTimelineRecyclerViewAdapter extends
     /**
      * Constructs a TweetTimelineRecyclerViewAdapter for a RecyclerView implementation of a timeline
      *
-     * @param context the context for row views.
+     * @param context  the context for row views.
      * @param timeline a Timeline&lt;Tweet&gt; providing access to Tweet data items.
      * @throws java.lang.IllegalArgumentException if context is null
      */
@@ -184,6 +185,7 @@ public class TweetTimelineRecyclerViewAdapter extends
 
         /**
          * Constructs a Builder.
+         *
          * @param context Context for Tweet views.
          */
         public Builder(Context context) {
@@ -192,6 +194,7 @@ public class TweetTimelineRecyclerViewAdapter extends
 
         /**
          * Sets the Tweet timeline data source.
+         *
          * @param timeline Timeline of Tweets
          */
         public TweetTimelineRecyclerViewAdapter.Builder setTimeline(Timeline<Tweet> timeline) {
@@ -201,6 +204,7 @@ public class TweetTimelineRecyclerViewAdapter extends
 
         /**
          * Sets the Tweet view style by resource id.
+         *
          * @param styleResId resource id of the Tweet view style
          */
         public TweetTimelineRecyclerViewAdapter.Builder setViewStyle(int styleResId) {
@@ -210,6 +214,7 @@ public class TweetTimelineRecyclerViewAdapter extends
 
         /**
          * Sets the callback to call when a Tweet action is performed on a Tweet view.
+         *
          * @param actionCallback called when a Tweet action is performed.
          */
         public TweetTimelineRecyclerViewAdapter.Builder setOnActionCallback(
@@ -220,6 +225,7 @@ public class TweetTimelineRecyclerViewAdapter extends
 
         /**
          * Sets the TimelineFilter used to filter tweets from timeline.
+         *
          * @param timelineFilter timelineFilter for timeline
          */
         public TweetTimelineRecyclerViewAdapter.Builder setTimelineFilter(
@@ -230,6 +236,7 @@ public class TweetTimelineRecyclerViewAdapter extends
 
         /**
          * Builds a TweetTimelineRecyclerViewAdapter from Builder parameters.
+         *
          * @return a TweetTimelineListAdpater
          */
         public TweetTimelineRecyclerViewAdapter build() {

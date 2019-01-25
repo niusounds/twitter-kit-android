@@ -37,7 +37,6 @@ public class TwitterSession extends Session<TwitterAuthToken> {
      * @param authToken Auth token
      * @param userId    User ID
      * @param userName  User Name
-     *
      * @throws java.lang.IllegalArgumentException if token argument is null
      */
     public TwitterSession(TwitterAuthToken authToken, long userId, String userName) {

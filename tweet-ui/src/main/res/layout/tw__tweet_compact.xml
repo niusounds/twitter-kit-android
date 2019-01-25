@@ -27,14 +27,14 @@
         android:layout_alignStart="@+id/tw__author_attribution"
         style="@style/tw__TweetRetweetedBy.Compact"
         tools:text="Retweeted by Jack"
-        tools:visibility="visible"/>
+        tools:visibility="visible" />
 
     <ImageView
         tools:ignore="ContentDescription"
         android:id="@+id/tw__tweet_author_avatar"
         android:layout_below="@id/tw__tweet_retweeted_by"
         style="@style/tw__TweetAvatar.Compact"
-        tools:src="#CCCCCC"/>
+        tools:src="#CCCCCC" />
 
     <!--Name and timestamp don't ellipsize, but @username in the middle does ellipsize-->
     <LinearLayout
@@ -47,17 +47,17 @@
         <TextView
             android:id="@+id/tw__tweet_author_full_name"
             style="@style/tw__TweetFullName.Compact"
-            tools:text="Jack"/>
+            tools:text="Jack" />
 
         <TextView
             android:id="@+id/tw__tweet_author_screen_name"
             style="@style/tw__TweetScreenName.Compact"
-            tools:text="\@jack"/>
+            tools:text="\@jack" />
 
         <TextView
             android:id="@+id/tw__tweet_timestamp"
             style="@style/tw__TweetTimestamp.Compact"
-            tools:text="• 03/21/2006"/>
+            tools:text="• 03/21/2006" />
 
     </LinearLayout>
 
@@ -67,18 +67,18 @@
         style="@style/tw__TwitterLogo.Compact"
         android:layout_below="@id/tw__tweet_retweeted_by"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true" />
 
     <com.twitter.sdk.android.tweetui.internal.AspectRatioFrameLayout
         android:id="@+id/tw__aspect_ratio_media_container"
         style="@style/tw__TweetMediaContainer.Compact"
         android:layout_alignLeft="@id/tw__author_attribution"
         android:layout_alignStart="@id/tw__author_attribution"
-        android:layout_below="@id/tw__author_attribution" >
+        android:layout_below="@id/tw__author_attribution">
 
         <com.twitter.sdk.android.tweetui.internal.TweetMediaView
             android:id="@+id/tweet_media_view"
-            style="@style/tw__TweetMedia"/>
+            style="@style/tw__TweetMedia" />
 
         <com.twitter.sdk.android.tweetui.internal.MediaBadgeView
             android:id="@+id/tw__tweet_media_badge"
@@ -91,7 +91,7 @@
         android:layout_below="@id/tw__aspect_ratio_media_container"
         android:layout_toRightOf="@id/tw__tweet_author_avatar"
         android:layout_toEndOf="@id/tw__tweet_author_avatar"
-        tools:text="just setting up my twttr"/>
+        tools:text="just setting up my twttr" />
 
     <FrameLayout
         android:id="@+id/quote_tweet_holder"
@@ -107,12 +107,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/quote_tweet_holder"
         android:layout_toEndOf="@id/tw__tweet_author_avatar"
-        android:layout_toRightOf="@id/tw__tweet_author_avatar"/>
+        android:layout_toRightOf="@id/tw__tweet_author_avatar" />
 
     <View
         android:id="@+id/bottom_separator"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tw__compact_tweet_container_bottom_separator"
-        android:layout_below="@id/quote_tweet_holder"/>
+        android:layout_below="@id/quote_tweet_holder" />
 
 </merge>

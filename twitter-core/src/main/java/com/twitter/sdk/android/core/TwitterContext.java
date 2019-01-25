@@ -49,14 +49,14 @@ class TwitterContext extends ContextWrapper {
 
     @Override
     public SQLiteDatabase openOrCreateDatabase(String name, int mode,
-            SQLiteDatabase.CursorFactory factory) {
+                                               SQLiteDatabase.CursorFactory factory) {
         return android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(
                 getDatabasePath(name), factory);
     }
 
     @Override
     public SQLiteDatabase openOrCreateDatabase(String name, int mode,
-            SQLiteDatabase.CursorFactory factory, DatabaseErrorHandler errorHandler) {
+                                               SQLiteDatabase.CursorFactory factory, DatabaseErrorHandler errorHandler) {
         return android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(
                 getDatabasePath(name).getPath(), factory, errorHandler);
     }

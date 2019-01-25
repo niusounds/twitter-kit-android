@@ -24,7 +24,7 @@ import org.robolectric.RobolectricTestRunner;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class GeocodeTest  {
+public class GeocodeTest {
 
     @Test
     public void testToString() {

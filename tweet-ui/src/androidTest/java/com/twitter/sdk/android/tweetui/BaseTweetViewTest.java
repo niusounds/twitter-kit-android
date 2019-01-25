@@ -88,7 +88,7 @@ public abstract class BaseTweetViewTest extends TweetUiTestCase {
     abstract BaseTweetView createViewWithMocks(Context context, Tweet tweet);
 
     abstract BaseTweetView createViewWithMocks(Context context, Tweet tweet, int styleResId,
-            BaseTweetView.DependencyProvider dependencyProvider);
+                                               BaseTweetView.DependencyProvider dependencyProvider);
 
     private void setUpMockDependencyProvider() {
         mockDependencyProvider = mock(TestDependencyProvider.class);
@@ -351,7 +351,7 @@ public abstract class BaseTweetViewTest extends TweetUiTestCase {
 
     public void testRetweetIconDark() {
         final BaseTweetView view = createView(context, TestFixtures.TEST_RETWEET,
-               R.style.tw__TweetDarkStyle);
+                R.style.tw__TweetDarkStyle);
         assertEquals(R.drawable.tw__ic_retweet_dark, view.retweetIconResId);
     }
 
@@ -473,7 +473,8 @@ public abstract class BaseTweetViewTest extends TweetUiTestCase {
 
         assertEquals(View.VISIBLE, tweetView.mediaContainer.getVisibility());
         assertEquals(View.VISIBLE, tweetView.tweetMediaView.getVisibility());
-        assertEquals(View.GONE, tweetView.mediaBadgeView.getVisibility());    }
+        assertEquals(View.GONE, tweetView.mediaBadgeView.getVisibility());
+    }
 
     public void testRender_rendersRetweetedStatus() {
         final BaseTweetView tweetView = createViewWithMocks(context, null);

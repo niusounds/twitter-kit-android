@@ -175,8 +175,8 @@ public class CollectionTimelineTest {
     @Test
     public void testGetOrderedTweets_handlesNull() {
         TwitterCollection collection = new TwitterCollection(
-            new TwitterCollection.Content(null, testUserMap),
-            new TwitterCollection.Metadata("", TEST_POSITION, testItems));
+                new TwitterCollection.Content(null, testUserMap),
+                new TwitterCollection.Metadata("", TEST_POSITION, testItems));
         List<Tweet> tweets = CollectionTimeline.getOrderedTweets(collection);
         assertTrue(tweets.isEmpty());
         collection = new TwitterCollection(new TwitterCollection.Content(testTweetMap, null),

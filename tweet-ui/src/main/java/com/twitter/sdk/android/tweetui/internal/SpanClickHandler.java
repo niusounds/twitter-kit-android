@@ -62,6 +62,7 @@ public class SpanClickHandler {
     /**
      * Takes a motion event from the processing view and check for clicks on
      * any of the clickable spans in the layout.
+     *
      * @param event The motion event.
      * @return true if the event has been handled.
      */

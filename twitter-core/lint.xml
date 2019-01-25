@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   ~ Copyright (C) 2015 Twitter, Inc.
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,19 +20,18 @@
         <!-- Suppress lint warning on xxxhdpi, which "is necessary only to provide a launcher icon
         that can appear larger than usual on an xxhdpi device. You do not need to provide xxxhdpi
         assets for all your app's images." -->
-        <ignore path="src/debug/res/drawable-xxxhdpi"/>
+        <ignore path="src/debug/res/drawable-xxxhdpi" />
     </issue>
     <issue id="SetJavaScriptEnabled" severity="error">
-        <ignore
-            path="src/main/java/com/twitter/sdk/android/core/identity/OAuthActivity.java"/>
+        <ignore path="src/main/java/com/twitter/sdk/android/core/identity/OAuthActivity.java" />
     </issue>
     <issue id="TrulyRandom" severity="ignore" />
-    <issue id="PackageManagerGetSignatures" severity="ignore"/>
+    <issue id="PackageManagerGetSignatures" severity="ignore" />
     <issue id="ParcelCreator" severity="error">
         <ignore
-            path="src/main/java/com/twitter/sdk/android/core/internal/oauth/GuestAuthToken.java"/>
+            path="src/main/java/com/twitter/sdk/android/core/internal/oauth/GuestAuthToken.java" />
         <ignore
-            path="src/main/java/com/twitter/sdk/android/core/identity/ShareEmailResultReceiver.java"/>
+            path="src/main/java/com/twitter/sdk/android/core/identity/ShareEmailResultReceiver.java" />
     </issue>
-    <issue id="InvalidPackage" severity="ignore"/>
+    <issue id="InvalidPackage" severity="ignore" />
 </lint>

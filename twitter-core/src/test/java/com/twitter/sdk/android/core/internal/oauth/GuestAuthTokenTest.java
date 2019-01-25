@@ -25,7 +25,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
-public class GuestAuthTokenTest  {
+public class GuestAuthTokenTest {
 
     private static final int HEADERS_COUNT = 2;
     private static final String TOKEN_TYPE = "tokenType";

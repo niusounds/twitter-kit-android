@@ -36,7 +36,8 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
     /**
      * Constructs a TweetTimelineListAdapter for the given Tweet Timeline.
-     * @param context the context for row views.
+     *
+     * @param context  the context for row views.
      * @param timeline a Timeline&lt;Tweet&gt; providing access to Tweet data items.
      * @throws java.lang.IllegalArgumentException if context is null
      */
@@ -118,6 +119,7 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
         /**
          * Constructs a Builder.
+         *
          * @param context Context for Tweet views.
          */
         public Builder(Context context) {
@@ -126,6 +128,7 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
         /**
          * Sets the Tweet timeline data source.
+         *
          * @param timeline Timeline of Tweets
          */
         public Builder setTimeline(Timeline<Tweet> timeline) {
@@ -135,6 +138,7 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
         /**
          * Sets the Tweet view style by resource id.
+         *
          * @param styleResId resource id of the Tweet view style
          */
         public Builder setViewStyle(int styleResId) {
@@ -144,6 +148,7 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
         /**
          * Sets the callback to call when a Tweet action is performed on a Tweet view.
+         *
          * @param actionCallback called when a Tweet action is performed.
          */
         public Builder setOnActionCallback(Callback<Tweet> actionCallback) {
@@ -153,6 +158,7 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
         /**
          * Sets the TimelineFilter used to filter tweets from timeline.
+         *
          * @param timelineFilter timelineFilter for timeline
          */
         public Builder setTimelineFilter(TimelineFilter timelineFilter) {
@@ -162,6 +168,7 @@ public class TweetTimelineListAdapter extends TimelineListAdapter<Tweet> {
 
         /**
          * Builds a TweetTimelineListAdapter from Builder parameters.
+         *
          * @return a TweetTimelineListAdpater
          */
         public TweetTimelineListAdapter build() {

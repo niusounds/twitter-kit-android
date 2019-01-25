@@ -83,6 +83,7 @@ public class CommonUtils {
     /**
      * Uses the given context's application icon to retrieve the package name for the resources for the context
      * This package name only differs from context.getPackageName() when using aapt parameter --rename-manifest-package
+     *
      * @param context Context to get resource package name from
      * @return String representing the package name of the resources for the given context
      */
@@ -117,8 +118,8 @@ public class CommonUtils {
      * </ol>
      * </p>
      *
-     * @param context {@link Context} to use when accessing resources
-     * @param key {@link String} name of the boolean value to look up
+     * @param context      {@link Context} to use when accessing resources
+     * @param key          {@link String} name of the boolean value to look up
      * @param defaultValue value to be returned if the specified resource could be not be found.
      * @return {@link String} value of the specified property, or an empty string if it could not be found.
      */
@@ -151,8 +152,8 @@ public class CommonUtils {
      * will be returned.
      * </p>
      *
-     * @param context {@link Context} to use when accessing resources
-     * @param key {@link String} name of the boolean value to look up
+     * @param context      {@link Context} to use when accessing resources
+     * @param key          {@link String} name of the boolean value to look up
      * @param defaultValue value to be returned if the specified resource could be not be found.
      * @return {@link String} value of the specified property, or an empty string if it could not be found.
      */
@@ -189,8 +190,8 @@ public class CommonUtils {
      * Used internally to log only when the com.twitter.sdk.android.TRACE_ENABLED resource value
      * is set to true.  When it is, this API passes processing to the log API.
      */
-    public static void logControlled(Context context, String msg){
-        if (isClsTrace(context)){
+    public static void logControlled(Context context, String msg) {
+        if (isClsTrace(context)) {
             Twitter.getLogger().d(Twitter.TAG, msg);
         }
     }
@@ -199,8 +200,8 @@ public class CommonUtils {
      * Used internally to log errors only when the com.twitter.sdk.android.TRACE_ENABLED resource
      * value is set to true.  When it is, this API passes processing to the logError API.
      */
-    public static void logControlledError(Context context, String msg, Throwable tr){
-        if (isClsTrace(context)){
+    public static void logControlledError(Context context, String msg, Throwable tr) {
+        if (isClsTrace(context)) {
             Twitter.getLogger().e(Twitter.TAG, msg);
         }
     }
@@ -216,10 +217,10 @@ public class CommonUtils {
     }
 
     /**
-     *  If {@link Twitter#isDebug()}, throws an IllegalStateException,
-     *  else logs a warning.
+     * If {@link Twitter#isDebug()}, throws an IllegalStateException,
+     * else logs a warning.
      *
-     * @param logTag the log tag to use for logging
+     * @param logTag   the log tag to use for logging
      * @param errorMsg the error message
      */
     public static void logOrThrowIllegalStateException(String logTag, String errorMsg) {

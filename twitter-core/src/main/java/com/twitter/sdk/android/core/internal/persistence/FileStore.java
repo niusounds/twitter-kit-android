@@ -22,25 +22,21 @@ import java.io.File;
 
 public interface FileStore {
     /**
-     *
      * @return Directory to store internal Cache files
      */
     File getCacheDir();
 
     /**
-     *
      * @return Directory to store External Cache files.
      */
     File getExternalCacheDir();
 
     /**
-     *
      * @return Directory to store internal files.
      */
     File getFilesDir();
 
     /**
-     *
      * @return Directory to store External files.
      */
     File getExternalFilesDir();

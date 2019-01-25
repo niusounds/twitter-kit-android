@@ -38,7 +38,7 @@ public class TwitterListTimelineTest {
     private static final Integer REQUIRED_DEFAULT_ITEMS_PER_REQUEST = 30;
     private static final Long TEST_LIST_ID = 128271137L;
     private static final String TEST_SLUG = "cool-accounts";
-    private static final Long TEST_OWNER_ID =  623265148L;
+    private static final Long TEST_OWNER_ID = 623265148L;
     private static final String TEST_OWNER_SCREEN_NAME = "dghubble";
     private static final Integer TEST_ITEMS_PER_REQUEST = 100;
     private static final Long TEST_SINCE_ID = 1000L;

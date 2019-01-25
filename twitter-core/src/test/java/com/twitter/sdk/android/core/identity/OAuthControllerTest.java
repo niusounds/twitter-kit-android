@@ -53,7 +53,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(RobolectricTestRunner.class)
-public class OAuthControllerTest  {
+public class OAuthControllerTest {
 
     private static final String TEST_URL = "https://test.com";
     private static final int TEST_ERROR_CODE = 1000;

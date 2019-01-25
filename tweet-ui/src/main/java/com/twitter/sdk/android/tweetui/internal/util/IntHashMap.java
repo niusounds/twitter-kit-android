@@ -15,6 +15,7 @@
  */
 
 package com.twitter.sdk.android.tweetui.internal.util;
+
 /**
  * <p>
  * A hash map that uses primitive ints for the key rather than objects.
@@ -28,9 +29,9 @@ package com.twitter.sdk.android.tweetui.internal.util;
  * @author Justin Couch
  * @author Alex Chaffee (alex@apache.org)
  * @author Stephen Colebourne
- * @since 2.0
  * @version $Revision: 1.6 $
  * @see java.util.HashMap
+ * @since 2.0
  */
 public class IntHashMap {
 
@@ -80,10 +81,10 @@ public class IntHashMap {
          * Create a new entry with the given values.
          * </p>
          *
-         * @param hash The code used to hash the object with
-         * @param key The key used to enter this in the table
+         * @param hash  The code used to hash the object with
+         * @param key   The key used to enter this in the table
          * @param value The value for this key
-         * @param next A reference to the next entry in the table
+         * @param next  A reference to the next entry in the table
          */
         protected Entry(int hash, int key, Object value, Entry next) {
             this.hash = hash;
@@ -111,7 +112,7 @@ public class IntHashMap {
      *
      * @param initialCapacity the initial capacity of the hashtable.
      * @throws IllegalArgumentException if the initial capacity is less than
-     *             zero.
+     *                                  zero.
      */
     public IntHashMap(int initialCapacity) {
         this(initialCapacity, 0.75f);
@@ -124,9 +125,9 @@ public class IntHashMap {
      * </p>
      *
      * @param initialCapacity the initial capacity of the hashtable.
-     * @param loadFactor the load factor of the hashtable.
+     * @param loadFactor      the load factor of the hashtable.
      * @throws IllegalArgumentException if the initial capacity is less than
-     *             zero, or if the load factor is nonpositive.
+     *                                  zero, or if the load factor is nonpositive.
      */
     public IntHashMap(int initialCapacity, float loadFactor) {
         super();
@@ -162,7 +163,7 @@ public class IntHashMap {
      * </p>
      *
      * @return <code>true</code> if this hashtable maps no keys to values;
-     *         <code>false</code> otherwise.
+     * <code>false</code> otherwise.
      */
     public boolean isEmpty() {
         return count == 0;
@@ -180,8 +181,8 @@ public class IntHashMap {
      *
      * @param value a value to search for.
      * @return <code>true</code> if and only if some key maps to the
-     *         <code>value</code> argument in this hashtable as determined by
-     *         the <tt>equals</tt> method; <code>false</code> otherwise.
+     * <code>value</code> argument in this hashtable as determined by
+     * the <tt>equals</tt> method; <code>false</code> otherwise.
      * @throws NullPointerException if the value is <code>null</code>.
      * @see #containsKey(int)
      * @see #containsValue(Object)
@@ -193,7 +194,7 @@ public class IntHashMap {
         }
 
         final Entry[] tab = table;
-        for (int i = tab.length; i-- > 0;) {
+        for (int i = tab.length; i-- > 0; ) {
             for (Entry e = tab[i]; e != null; e = e.next) {
                 if (e.value.equals(value)) {
                     return true;
@@ -228,8 +229,8 @@ public class IntHashMap {
      *
      * @param key possible key.
      * @return <code>true</code> if and only if the specified object is a key in
-     *         this hashtable, as determined by the <tt>equals</tt> method;
-     *         <code>false</code> otherwise.
+     * this hashtable, as determined by the <tt>equals</tt> method;
+     * <code>false</code> otherwise.
      * @see #contains(Object)
      */
     public boolean containsKey(int key) {
@@ -251,8 +252,8 @@ public class IntHashMap {
      *
      * @param key a key in the hashtable.
      * @return the value to which the key is mapped in this hashtable;
-     *         <code>null</code> if the key is not mapped to any value in this
-     *         hashtable.
+     * <code>null</code> if the key is not mapped to any value in this
+     * hashtable.
      * @see #put(int, Object)
      */
     public Object get(int key) {
@@ -287,8 +288,8 @@ public class IntHashMap {
         threshold = (int) (newCapacity * loadFactor);
         table = newMap;
 
-        for (int i = oldCapacity; i-- > 0;) {
-            for (Entry old = oldMap[i]; old != null;) {
+        for (int i = oldCapacity; i-- > 0; ) {
+            for (Entry old = oldMap[i]; old != null; ) {
                 final Entry e = old;
                 old = old.next;
 
@@ -309,10 +310,10 @@ public class IntHashMap {
      * key that is equal to the original key.
      * </p>
      *
-     * @param key the hashtable key.
+     * @param key   the hashtable key.
      * @param value the value.
      * @return the previous value of the specified key in this hashtable, or
-     *         <code>null</code> if it did not have one.
+     * <code>null</code> if it did not have one.
      * @throws NullPointerException if the key is <code>null</code>.
      * @see #get(int)
      */
@@ -354,7 +355,7 @@ public class IntHashMap {
      *
      * @param key the key that needs to be removed.
      * @return the value to which the key had been mapped in this hashtable, or
-     *         <code>null</code> if the key did not have a mapping.
+     * <code>null</code> if the key did not have a mapping.
      */
     public Object remove(int key) {
         final Entry[] tab = table;
@@ -383,7 +384,7 @@ public class IntHashMap {
      */
     public synchronized void clear() {
         final Entry[] tab = table;
-        for (int index = tab.length; --index >= 0;) {
+        for (int index = tab.length; --index >= 0; ) {
             tab[index] = null;
         }
         count = 0;

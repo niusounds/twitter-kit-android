@@ -44,6 +44,7 @@ public class AuthTokenAdapter implements JsonSerializer<AuthToken>, JsonDeserial
 
     static final Map<String, Class<? extends AuthToken>> authTypeRegistry
             = new HashMap<>();
+
     static {
         authTypeRegistry.put("oauth1a", TwitterAuthToken.class);
         authTypeRegistry.put("oauth2", OAuth2Token.class);
@@ -67,7 +68,7 @@ public class AuthTokenAdapter implements JsonSerializer<AuthToken>, JsonDeserial
     @Override
     public AuthToken deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
             throws JsonParseException {
-        final JsonObject jsonObject =  json.getAsJsonObject();
+        final JsonObject jsonObject = json.getAsJsonObject();
         final JsonPrimitive jsonAuthType = jsonObject.getAsJsonPrimitive(AUTH_TYPE);
         final String authType = jsonAuthType.getAsString();
         final JsonElement jsonAuthToken = jsonObject.get(AUTH_TOKEN);

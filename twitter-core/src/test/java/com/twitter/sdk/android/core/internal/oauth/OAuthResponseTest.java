@@ -29,7 +29,7 @@ import org.robolectric.RobolectricTestRunner;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class OAuthResponseTest  {
+public class OAuthResponseTest {
 
     @Test
     public void testParcelable() {

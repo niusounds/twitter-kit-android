@@ -49,7 +49,7 @@ public class MentionEntity extends Entity {
     public final String screenName;
 
     public MentionEntity(long id, String idStr, String name, String screenName, int start,
-            int end) {
+                         int end) {
         super(start, end);
         this.id = id;
         this.idStr = idStr;

@@ -32,14 +32,15 @@ import java.util.List;
 
 final class TweetTextUtils {
 
-    private TweetTextUtils() {}
+    private TweetTextUtils() {
+    }
 
     /**
      * Should not be called directly outside of TweetRepository, the return value should be cached
      * or memoized.
      *
      * @param tweet The tweet to format
-     * @return      The formatted Tweet text
+     * @return The formatted Tweet text
      */
     static FormattedTweetText formatTweetText(Tweet tweet) {
         if (tweet == null) return null;
@@ -56,7 +57,7 @@ final class TweetTextUtils {
      * Populates the list of formatted entities within the formattedTweetText.
      *
      * @param formattedTweetText The formatted tweet text that is to be populated
-     * @param tweet The source Tweet
+     * @param tweet              The source Tweet
      */
     static void convertEntities(FormattedTweetText formattedTweetText, Tweet tweet) {
         if (tweet.entities == null) return;
@@ -111,7 +112,7 @@ final class TweetTextUtils {
      * emoji/supplementary characters.
      *
      * @param formattedTweetText The formatted tweet text that is to be populated
-     * @param tweet The source Tweet
+     * @param tweet              The source Tweet
      */
     static void format(FormattedTweetText formattedTweetText, Tweet tweet) {
         if (TextUtils.isEmpty(tweet.text)) return;
@@ -134,7 +135,7 @@ final class TweetTextUtils {
      * them as necessary.
      *
      * @param entities The entities that need to be adjusted
-     * @param indices The indices of where there were escaped html chars that we unescaped
+     * @param indices  The indices of where there were escaped html chars that we unescaped
      */
     static void adjustIndicesForEscapedChars(
             List<? extends FormattedUrlEntity> entities,
@@ -172,7 +173,7 @@ final class TweetTextUtils {
                 }
             }
             // Once we've accumulated diffs, calc the offset
-            entity.start = entity.start  - (diff + inDiff);
+            entity.start = entity.start - (diff + inDiff);
             entity.end = entity.end - (diff + inDiff);
         }
     }
@@ -182,11 +183,11 @@ final class TweetTextUtils {
      * UTF-8 (ones outside of U+0000 to U+FFFF range) are represented as a pair of char values, the
      * first from the high-surrogates range, and the second from the low-surrogates range.
      *
-     * @param content The content of the tweet
+     * @param content            The content of the tweet
      * @param formattedTweetText The formatted tweet text with entities that we need to adjust
      */
     static void adjustIndicesForSupplementaryChars(StringBuilder content,
-            FormattedTweetText formattedTweetText) {
+                                                   FormattedTweetText formattedTweetText) {
         final List<Integer> highSurrogateIndices = new ArrayList<>();
         final int len = content.length() - 1;
         for (int i = 0; i < len; ++i) {
@@ -208,10 +209,10 @@ final class TweetTextUtils {
      * runtime.
      *
      * @param entities The entities that need to be adjusted
-     * @param indices The indices in the string where there are supplementary chars
+     * @param indices  The indices in the string where there are supplementary chars
      */
     static void adjustEntitiesWithOffsets(List<? extends FormattedUrlEntity> entities,
-            List<Integer> indices) {
+                                          List<Integer> indices) {
         if (entities == null || indices == null) return;
         for (FormattedUrlEntity entity : entities) {
             // find all indices <= start and update offsets by that much

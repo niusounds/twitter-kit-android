@@ -45,13 +45,13 @@ public class BindingValuesAdapter implements JsonSerializer<BindingValues>,
 
     @Override
     public JsonElement serialize(BindingValues src, Type typeOfSrc,
-            JsonSerializationContext context) {
+                                 JsonSerializationContext context) {
         return null;
     }
 
     @Override
     public BindingValues deserialize(JsonElement json, Type typeOfT,
-            JsonDeserializationContext context) throws JsonParseException {
+                                     JsonDeserializationContext context) throws JsonParseException {
         if (!json.isJsonObject()) {
             return new BindingValues();
         }

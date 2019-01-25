@@ -18,7 +18,6 @@
 package com.twitter.sdk.android.tweetui;
 
 import android.content.res.Resources;
-import android.support.v4.util.SparseArrayCompat;
 import android.text.format.DateUtils;
 
 import java.text.DateFormat;
@@ -27,6 +26,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.collection.SparseArrayCompat;
 
 // Cribbed from twitter-android-internal, renamed and formatted to our standards
 // methods here should only be accessed on the main thread
@@ -37,7 +38,8 @@ final class TweetDateUtils {
     static final DateFormatter RELATIVE_DATE_FORMAT = new DateFormatter();
     static final long INVALID_DATE = -1;
 
-    private TweetDateUtils() {}
+    private TweetDateUtils() {
+    }
 
     static long apiTimeToLong(String apiTime) {
         if (apiTime == null) return INVALID_DATE;
@@ -65,9 +67,9 @@ final class TweetDateUtils {
      * time state. If a timestamp is in the future we return it as an absolute date string. Within
      * the same second we return 0s
      *
-     * @param res resource
+     * @param res               resource
      * @param currentTimeMillis timestamp for offset
-     * @param timestamp timestamp
+     * @param timestamp         timestamp
      * @return the relative time string
      */
     static String getRelativeTimeString(Resources res, long currentTimeMillis, long timestamp) {

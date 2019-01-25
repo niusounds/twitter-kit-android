@@ -15,8 +15,7 @@
   ~
   -->
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/tw__video_control_height">
@@ -30,7 +29,7 @@
         android:background="@null"
         android:paddingTop="4dp"
         android:src="@drawable/tw__video_pause_btn"
-        android:contentDescription="@string/tw__pause"/>
+        android:contentDescription="@string/tw__pause" />
 
     <TextView
         android:id="@+id/tw__current_time"
@@ -40,7 +39,7 @@
         android:layout_toRightOf="@id/tw__state_control"
         android:textColor="@android:color/white"
         android:textSize="@dimen/tw__video_control_text_size"
-        tools:text="0:01"/>
+        tools:text="0:01" />
 
     <SeekBar
         tools:ignore="UnusedAttribute"
@@ -53,7 +52,7 @@
         android:background="@null"
         android:splitTrack="false"
         android:progressDrawable="@drawable/tw__video_seekbar"
-        android:thumb="@drawable/tw__seekbar_thumb"/>
+        android:thumb="@drawable/tw__seekbar_thumb" />
 
     <TextView
         android:id="@+id/tw__duration"
@@ -64,5 +63,5 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/tw__video_control_text_size"
         android:layout_marginRight="10dp"
-        tools:text="1:00"/>
+        tools:text="1:00" />
 </RelativeLayout>

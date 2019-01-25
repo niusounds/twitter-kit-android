@@ -56,10 +56,8 @@
           }
         ],
         "hashtags": [
-
         ],
         "user_mentions": [
-
         ]
       },
       "in_reply_to_user_id_str": null,
@@ -91,7 +89,6 @@
         }
       ],
       "hashtags": [
-
       ],
       "user_mentions": [
         {
@@ -126,24 +123,24 @@
   "following": true,
   "show_all_inline_media": true,
   "screen_name": "rsarver",
-    "entities": {
-        "url": {
-            "urls": [
-                {
-                    "url": "http://t.co/78pYTvWfJd",
-                    "expanded_url": "http://dev.twitter.com",
-                    "display_url": "dev.twitter.com",
-                    "indices": [
-                        0,
-                        22
-                    ]
-                }
-            ]
-        },
-        "description": {
-            "urls": []
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "http://t.co/78pYTvWfJd",
+          "expanded_url": "http://dev.twitter.com",
+          "display_url": "dev.twitter.com",
+          "indices": [
+            0,
+            22
+          ]
         }
+      ]
     },
+    "description": {
+      "urls": []
+    }
+  },
   "withheld_in_countries": [
     "XY"
   ]

@@ -38,7 +38,7 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
 @RunWith(RobolectricTestRunner.class)
-public class OAuthWebViewClientTest  {
+public class OAuthWebViewClientTest {
 
     private static final String COMPLETE_URL = "twittersdk://callback";
     private static final String RETURNED_URL = "twittersdk://callback?version=1.0.1-SNAPSHOT.dev"
@@ -114,7 +114,7 @@ public class OAuthWebViewClientTest  {
     }
 
     private void verifyOnError(int expectedErrorCode, String expectedErrorDesc,
-            String expectedFailingUrl) {
+                               String expectedFailingUrl) {
         final ArgumentCaptor<WebViewException> exceptionArgCaptor
                 = ArgumentCaptor.forClass(WebViewException.class);
         verify(mockListener).onError(exceptionArgCaptor.capture());

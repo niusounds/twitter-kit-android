@@ -59,7 +59,7 @@ public class TweetMediaView extends ViewGroup implements View.OnClickListener {
     private final RectF rect = new RectF();
     private final int mediaDividerSize;
     private int imageCount;
-    final float [] radii = new float[8];
+    final float[] radii = new float[8];
     int mediaBgColor = Color.BLACK;
     int photoErrorResId;
     final DependencyProvider dependencyProvider;
@@ -78,7 +78,7 @@ public class TweetMediaView extends ViewGroup implements View.OnClickListener {
     TweetMediaView(Context context, AttributeSet attrs, DependencyProvider dependencyProvider) {
         super(context, attrs);
 
-        this.dependencyProvider =  dependencyProvider;
+        this.dependencyProvider = dependencyProvider;
         mediaDividerSize = getResources().getDimensionPixelSize
                 (R.dimen.tw__media_view_divider_size);
         photoErrorResId = R.drawable.tw__ic_tweet_photo_error_dark;
@@ -375,7 +375,7 @@ public class TweetMediaView extends ViewGroup implements View.OnClickListener {
 
     String getSizedImagePath(MediaEntity mediaEntity) {
         if (imageCount > 1) {
-           return mediaEntity.mediaUrlHttps + SIZED_IMAGE_SMALL;
+            return mediaEntity.mediaUrlHttps + SIZED_IMAGE_SMALL;
         }
         return mediaEntity.mediaUrlHttps;   // defaults to :medium
     }
@@ -429,7 +429,9 @@ public class TweetMediaView extends ViewGroup implements View.OnClickListener {
         }
 
         @Override
-        public void onError() { /* intentionally blank */ }
+        public void onError(Exception e) {
+            /* intentionally blank */
+        }
     }
 
     static class Size {

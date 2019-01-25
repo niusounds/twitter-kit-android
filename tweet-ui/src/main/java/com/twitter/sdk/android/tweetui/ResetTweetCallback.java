@@ -32,7 +32,7 @@ class ResetTweetCallback extends Callback<Tweet> {
     final Callback<Tweet> cb;
 
     ResetTweetCallback(BaseTweetView baseTweetView, TweetRepository tweetRepository,
-                        Callback<Tweet> cb) {
+                       Callback<Tweet> cb) {
         this.baseTweetView = baseTweetView;
         this.tweetRepository = tweetRepository;
         this.cb = cb;

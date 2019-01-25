@@ -50,7 +50,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(RobolectricTestRunner.class)
 @SuppressWarnings("checkstyle:linelength")
-public class OAuth2ServiceTest  {
+public class OAuth2ServiceTest {
 
     /**
      * Example consumer key and consumer secret values provided by:
@@ -195,7 +195,7 @@ public class OAuth2ServiceTest  {
         service.api = new MockOAuth2Api() {
             @Override
             public Call<OAuth2Token> getAppAuthToken(@Header(OAuthConstants.HEADER_AUTHORIZATION) String auth,
-                    @Field(OAuthConstants.PARAM_GRANT_TYPE) String grantType) {
+                                                     @Field(OAuthConstants.PARAM_GRANT_TYPE) String grantType) {
                 return Calls.failure(new IOException());
             }
         };

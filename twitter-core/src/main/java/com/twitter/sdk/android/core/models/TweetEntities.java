@@ -63,7 +63,7 @@ public class TweetEntities {
     }
 
     public TweetEntities(List<UrlEntity> urls, List<MentionEntity> userMentions,
-            List<MediaEntity> media, List<HashtagEntity> hashtags, List<SymbolEntity> symbols) {
+                         List<MediaEntity> media, List<HashtagEntity> hashtags, List<SymbolEntity> symbols) {
         this.urls = ModelUtils.getSafeList(urls);
         this.userMentions = ModelUtils.getSafeList(userMentions);
         this.media = ModelUtils.getSafeList(media);

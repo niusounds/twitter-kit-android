@@ -46,7 +46,7 @@ public class SwipeToDismissTouchListener implements View.OnTouchListener {
     }
 
     SwipeToDismissTouchListener(Callback listener, int touchSlop, float maxTranslate,
-            float closeThreshold) {
+                                float closeThreshold) {
         setCallback(listener);
         this.touchSlop = touchSlop;
         this.maxTranslate = maxTranslate;
@@ -100,7 +100,7 @@ public class SwipeToDismissTouchListener implements View.OnTouchListener {
                 }
                 break;
             }
-            case MotionEvent.ACTION_POINTER_DOWN:{
+            case MotionEvent.ACTION_POINTER_DOWN: {
                 settleView(swipeableView);
                 isMoving = false;
                 pointerIndex = -1; // invalidate pointer index until next ACTION_DOWN

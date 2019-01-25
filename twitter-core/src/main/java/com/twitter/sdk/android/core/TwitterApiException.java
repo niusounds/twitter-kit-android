@@ -44,7 +44,7 @@ public class TwitterApiException extends TwitterException {
     }
 
     TwitterApiException(Response response, ApiError apiError, TwitterRateLimit twitterRateLimit,
-            int code) {
+                        int code) {
         super(createExceptionMessage(code));
         this.apiError = apiError;
         this.twitterRateLimit = twitterRateLimit;

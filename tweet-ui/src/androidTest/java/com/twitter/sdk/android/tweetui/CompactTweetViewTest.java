@@ -58,7 +58,7 @@ public class CompactTweetViewTest extends BaseTweetViewTest {
 
     @Override
     CompactTweetView createViewWithMocks(Context context, Tweet tweet, int styleResId,
-            BaseTweetView.DependencyProvider dependencyProvider) {
+                                         BaseTweetView.DependencyProvider dependencyProvider) {
         return new CompactTweetView(context, tweet, styleResId, dependencyProvider);
     }
 

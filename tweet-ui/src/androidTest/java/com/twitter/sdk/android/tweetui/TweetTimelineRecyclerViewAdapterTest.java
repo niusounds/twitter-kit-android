@@ -97,7 +97,7 @@ public class TweetTimelineRecyclerViewAdapterTest extends TweetUiTestCase {
         try {
             recyclerViewAdapter =
                     new TweetTimelineRecyclerViewAdapter.Builder(null).setTimeline(mockTimeline)
-                    .build();
+                            .build();
             fail("Null context should throw exception");
         } catch (IllegalArgumentException e) {
             assertEquals(NULL_CONTEXT_MESSAGE, e.getMessage());
@@ -108,7 +108,7 @@ public class TweetTimelineRecyclerViewAdapterTest extends TweetUiTestCase {
         try {
             recyclerViewAdapter =
                     new TweetTimelineRecyclerViewAdapter.Builder(getContext()).setTimeline(null)
-                    .build();
+                            .build();
             fail("Null timeline should throw exception");
         } catch (IllegalArgumentException e) {
             assertEquals(NULL_TIMELINE_MESSAGE, e.getMessage());
@@ -158,6 +158,7 @@ public class TweetTimelineRecyclerViewAdapterTest extends TweetUiTestCase {
 
         /**
          * Constructs a FakeTweetTimeline
+         *
          * @param numItems the number of Tweets to return per call to next/previous
          */
         FakeTweetTimeline(long numItems) {
@@ -185,6 +186,7 @@ public class TweetTimelineRecyclerViewAdapterTest extends TweetUiTestCase {
 
     /**
      * Makes class public so it can be mocked on ART runtime.
+     *
      * @param <T>
      */
     public class TestTimelineDelegate<T extends Identifiable> extends TimelineDelegate {

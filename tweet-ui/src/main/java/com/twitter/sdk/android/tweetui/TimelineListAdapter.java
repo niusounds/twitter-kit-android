@@ -34,7 +34,8 @@ abstract class TimelineListAdapter<T extends Identifiable> extends BaseAdapter {
 
     /**
      * Constructs a TimelineListAdapter for the given Timeline.
-     * @param context the context for row views.
+     *
+     * @param context  the context for row views.
      * @param timeline a Timeline providing access to timeline data items.
      * @throws java.lang.IllegalArgumentException if context or timeline is null
      */

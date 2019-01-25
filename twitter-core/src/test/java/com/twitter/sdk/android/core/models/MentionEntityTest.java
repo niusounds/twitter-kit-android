@@ -29,7 +29,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class MentionEntityTest  {
+public class MentionEntityTest {
 
     private static final String TEST_JSON = "{\"name\":\"Twitter API\","
             + "\"indices\":[4,15], \"screen_name\":\"twitterapi\","

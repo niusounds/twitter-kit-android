@@ -39,19 +39,19 @@ public class PlayerActivity extends Activity {
         final PlayerItem item = (PlayerItem) getIntent().getSerializableExtra(PLAYER_ITEM);
         final View rootView = findViewById(android.R.id.content);
         playerController = new PlayerController(rootView,
-                new SwipeToDismissTouchListener.Callback(){
+                new SwipeToDismissTouchListener.Callback() {
 
-            @Override
-            public void onDismiss() {
-                PlayerActivity.this.finish();
-                overridePendingTransition(0, R.anim.tw__slide_out);
-            }
+                    @Override
+                    public void onDismiss() {
+                        PlayerActivity.this.finish();
+                        overridePendingTransition(0, R.anim.tw__slide_out);
+                    }
 
-            @Override
-            public void onMove(float translationY) {
+                    @Override
+                    public void onMove(float translationY) {
 
-            }
-        });
+                    }
+                });
         playerController.prepare(item);
     }
 

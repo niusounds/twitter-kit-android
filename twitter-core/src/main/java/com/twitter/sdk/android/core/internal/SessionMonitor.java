@@ -29,6 +29,7 @@ import java.util.concurrent.ExecutorService;
 
 /**
  * A session monitor for validating sessions.
+ *
  * @param <T>
  */
 public class SessionMonitor<T extends Session> {
@@ -40,18 +41,18 @@ public class SessionMonitor<T extends Session> {
     private final SessionVerifier sessionVerifier;
 
     /**
-     * @param sessionManager A user auth based session manager
+     * @param sessionManager  A user auth based session manager
      * @param executorService used to
      */
     public SessionMonitor(SessionManager<T> sessionManager, ExecutorService executorService,
-            SessionVerifier<T> sessionVerifier) {
+                          SessionVerifier<T> sessionVerifier) {
         this(sessionManager, new SystemCurrentTimeProvider(),
                 executorService, new MonitorState(), sessionVerifier);
     }
 
     SessionMonitor(SessionManager<T> sessionManager, SystemCurrentTimeProvider time,
-            ExecutorService executorService, MonitorState monitorState, SessionVerifier
-            sessionVerifier) {
+                   ExecutorService executorService, MonitorState monitorState, SessionVerifier
+                           sessionVerifier) {
         this.time = time;
         this.sessionManager = sessionManager;
         this.executorService = executorService;
@@ -61,6 +62,7 @@ public class SessionMonitor<T extends Session> {
 
     /**
      * This is how we hook into the activity lifecycle to detect if the user is using the app.
+     *
      * @param activityLifecycleManager
      */
     public void monitorActivityLifecycle(ActivityLifecycleManager activityLifecycleManager) {

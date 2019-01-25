@@ -136,7 +136,7 @@ public class TimelineListAdapterTest {
         }
 
         TestTimelineListAdapter(Context context, TimelineDelegate<T> delegate) {
-           super(context, delegate);
+            super(context, delegate);
         }
 
         @Override
@@ -147,6 +147,7 @@ public class TimelineListAdapterTest {
 
     /**
      * Makes class public so it can be mocked on ART runtime.
+     *
      * @param <T>
      */
     class TestTimelineDelegate<T extends Identifiable> extends TimelineDelegate {

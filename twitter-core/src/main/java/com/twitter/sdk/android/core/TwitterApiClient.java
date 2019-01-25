@@ -59,7 +59,7 @@ public class TwitterApiClient {
 
     /**
      * Constructs Guest Session based TwitterApiClient, with custom http client.
-     *
+     * <p>
      * The custom http client can be constructed with {@link okhttp3.Interceptor}, and other
      * optional params provided in {@link okhttp3.OkHttpClient}.
      */
@@ -67,7 +67,7 @@ public class TwitterApiClient {
         this(OkHttpClientHelper.getCustomOkHttpClient(
                 client,
                 TwitterCore.getInstance().getGuestSessionProvider()),
-            new TwitterApi());
+                new TwitterApi());
     }
 
     /**
@@ -77,12 +77,12 @@ public class TwitterApiClient {
         this(OkHttpClientHelper.getOkHttpClient(
                 session,
                 TwitterCore.getInstance().getAuthConfig()),
-            new TwitterApi());
+                new TwitterApi());
     }
 
     /**
      * Constructs User Session based TwitterApiClient, with custom http client.
-     *
+     * <p>
      * The custom http client can be constructed with {@link okhttp3.Interceptor}, and other
      * optional params provided in {@link okhttp3.OkHttpClient}.
      */
@@ -91,7 +91,7 @@ public class TwitterApiClient {
                 client,
                 session,
                 TwitterCore.getInstance().getAuthConfig()),
-            new TwitterApi());
+                new TwitterApi());
     }
 
     TwitterApiClient(OkHttpClient client, TwitterApi twitterApi) {
@@ -156,6 +156,7 @@ public class TwitterApiClient {
 
     /**
      * Use CollectionTimeline directly, CollectionService is expected to change.
+     *
      * @return {@link CollectionService} to access TwitterApi
      */
     public CollectionService getCollectionService() {

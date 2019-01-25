@@ -19,7 +19,6 @@ package com.twitter.sdk.android.tweetui;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 
 import com.twitter.sdk.android.core.models.MediaEntity;
 import com.twitter.sdk.android.tweetui.internal.SwipeToDismissTouchListener;
@@ -27,6 +26,8 @@ import com.twitter.sdk.android.tweetui.internal.SwipeToDismissTouchListener;
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class GalleryActivity extends Activity {
     public static final String GALLERY_ITEM = "GALLERY_ITEM";
@@ -76,16 +77,16 @@ public class GalleryActivity extends Activity {
     }
 
     SwipeToDismissTouchListener.Callback getSwipeToDismissCallback() {
-       return new SwipeToDismissTouchListener.Callback() {
-           @Override
-           public void onDismiss() {
-               finish();
-               overridePendingTransition(0, R.anim.tw__slide_out);
-           }
+        return new SwipeToDismissTouchListener.Callback() {
+            @Override
+            public void onDismiss() {
+                finish();
+                overridePendingTransition(0, R.anim.tw__slide_out);
+            }
 
-           @Override
-           public void onMove(float translationY) { /* intentionally blank */ }
-       };
+            @Override
+            public void onMove(float translationY) { /* intentionally blank */ }
+        };
     }
 
     // For backwards compatibility we need to support single entity or list of entities.

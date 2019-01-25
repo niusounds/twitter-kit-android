@@ -27,7 +27,8 @@ public interface TweetMediaClickListener {
 
     /**
      * Called when media clicked.
-     * @param tweet The Tweet that was clicked.
+     *
+     * @param tweet  The Tweet that was clicked.
      * @param entity The entity that was clicked.
      */
     void onMediaEntityClick(Tweet tweet, MediaEntity entity);

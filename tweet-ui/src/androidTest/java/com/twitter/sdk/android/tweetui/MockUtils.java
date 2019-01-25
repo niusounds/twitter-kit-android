@@ -45,7 +45,8 @@ import static org.mockito.Mockito.when;
 
 final class MockUtils {
 
-    private MockUtils() {}
+    private MockUtils() {
+    }
 
     static Picasso mockPicasso(Picasso picasso, RequestCreator requestCreator) {
         when(picasso.load(anyString())).thenReturn(requestCreator);
@@ -67,7 +68,7 @@ final class MockUtils {
     }
 
     static void mockClients(ConcurrentHashMap<Session, TwitterApiClient> clients,
-                                   TwitterApiClient apiClient) {
+                            TwitterApiClient apiClient) {
         when(clients.get(anyObject())).thenReturn(apiClient);
         when(clients.contains(anyObject())).thenReturn(true);
     }

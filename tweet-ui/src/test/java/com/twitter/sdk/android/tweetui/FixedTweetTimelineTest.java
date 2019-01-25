@@ -71,6 +71,7 @@ public class FixedTweetTimelineTest {
                         result.data.timelineCursor.maxPosition);
                 assertNull(result.response);
             }
+
             @Override
             public void failure(TwitterException exception) {
                 fail("Expected FixedTweetTimeline next to always succeed.");

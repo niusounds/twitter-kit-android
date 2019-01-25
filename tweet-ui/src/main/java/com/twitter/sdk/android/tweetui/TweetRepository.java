@@ -18,7 +18,6 @@
 package com.twitter.sdk.android.tweetui;
 
 import android.os.Handler;
-import android.support.v4.util.LruCache;
 import android.text.TextUtils;
 
 import com.twitter.sdk.android.core.Callback;
@@ -32,6 +31,8 @@ import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.models.Tweet;
 
 import java.util.List;
+
+import androidx.collection.LruCache;
 
 
 /**
@@ -55,7 +56,7 @@ class TweetRepository {
 
     // Testing only
     TweetRepository(Handler mainHandler, SessionManager<TwitterSession> userSessionManagers,
-            TwitterCore twitterCore) {
+                    TwitterCore twitterCore) {
         this.twitterCore = twitterCore;
         this.mainHandler = mainHandler;
         this.userSessionManagers = userSessionManagers;
@@ -67,7 +68,7 @@ class TweetRepository {
      * This method will cache formatted tweet values to ensure we don't slow down rendering
      *
      * @param tweet the Tweet that will be formatted
-     * @return      the formatted values suitable for display, can be null
+     * @return the formatted values suitable for display, can be null
      */
     FormattedTweetText formatTweetText(final Tweet tweet) {
         if (tweet == null) return null;
@@ -90,8 +91,9 @@ class TweetRepository {
 
     /**
      * Callable on the main thread.
+     *
      * @param tweet Tweet to deliver to the client in a Result
-     * @param cb the developer callback
+     * @param cb    the developer callback
      */
     private void deliverTweet(final Tweet tweet, final Callback<Tweet> cb) {
         if (cb == null) return;
@@ -151,8 +153,9 @@ class TweetRepository {
      * Queues and loads a Tweet from the API statuses/show endpoint. Queue ensures a client with
      * at least guest auth is obtained before performing the request. Adds the the Tweet from the
      * response to the cache and provides the Tweet to the callback success method.
+     *
      * @param tweetId Tweet id
-     * @param cb callback
+     * @param cb      callback
      */
     void loadTweet(final long tweetId, final Callback<Tweet> cb) {
         final Tweet cachedTweet = tweetCache.get(tweetId);
@@ -170,8 +173,9 @@ class TweetRepository {
      * Queues and loads multiple Tweets from the API lookup endpoint. Queue ensures a client with
      * at least guest auth is obtained before performing the request. Orders the Tweets from the
      * response and provides them to the callback success method.
+     *
      * @param tweetIds list of Tweet ids
-     * @param cb callback
+     * @param cb       callback
      */
     void loadTweets(final List<Long> tweetIds, final Callback<List<Tweet>> cb) {
         final String commaSepIds = TextUtils.join(",", tweetIds);

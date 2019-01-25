@@ -27,7 +27,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 @RunWith(RobolectricTestRunner.class)
-public class TwitterAuthTokenTest  {
+public class TwitterAuthTokenTest {
 
     @Test
     public void testParcelable() {

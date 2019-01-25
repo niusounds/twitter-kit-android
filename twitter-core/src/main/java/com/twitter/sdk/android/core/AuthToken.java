@@ -41,6 +41,7 @@ public abstract class AuthToken {
 
     /**
      * Determines whether a token is known to have expired.
+     *
      * @return true if the token is known to have expired, otherwise false to indicate the token
      * may or may not be considered expired by the server.
      */

@@ -38,7 +38,7 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
     final Boolean includeRetweets;
 
     TwitterListTimeline(TwitterCore twitterCore, Long listId, String slug, Long ownerId,
-        String ownerScreenName, Integer maxItemsPerRequest, Boolean includeRetweets) {
+                        String ownerScreenName, Integer maxItemsPerRequest, Boolean includeRetweets) {
         this.twitterCore = twitterCore;
         this.listId = listId;
         this.slug = slug;
@@ -51,8 +51,9 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
     /**
      * Loads Tweets with id greater than (newer than) sinceId. If sinceId is null, loads the newest
      * Tweets.
+     *
      * @param sinceId minimum id of the Tweets to load (exclusive).
-     * @param cb callback.
+     * @param cb      callback.
      */
     @Override
     public void next(Long sinceId, Callback<TimelineResult<Tweet>> cb) {
@@ -61,8 +62,9 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
     /**
      * Loads Tweets with id less than (older than) maxId.
+     *
      * @param maxId maximum id of the Tweets to load (exclusive).
-     * @param cb callback.
+     * @param cb    callback.
      */
     @Override
     public void previous(Long maxId, Callback<TimelineResult<Tweet>> cb) {
@@ -103,6 +105,7 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
         /**
          * Sets the id for the Twitter List to get Tweets from.
+         *
          * @param id The ID of the Tweet list to get Tweets from.
          */
         public Builder id(Long id) {
@@ -112,7 +115,8 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
         /**
          * Sets the List slug name and owner id for the TwitterListTimeline.
-         * @param slug The list slug name (e.g. 'textile-engineers').
+         *
+         * @param slug    The list slug name (e.g. 'textile-engineers').
          * @param ownerId The list owner Twitter user id.
          */
         public Builder slugWithOwnerId(String slug, Long ownerId) {
@@ -123,7 +127,8 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
         /**
          * Sets the slug name and owner screen name for the TwitterListTimeline.
-         * @param slug The list slug name (e.g. "textile-engineers").
+         *
+         * @param slug            The list slug name (e.g. "textile-engineers").
          * @param ownerScreenName The list owner screen name (e.g. "twitterdev").
          */
         public Builder slugWithOwnerScreenName(String slug, String ownerScreenName) {
@@ -134,6 +139,7 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
         /**
          * Sets the number of Tweets returned per request for the TwitterListTimeline.
+         *
          * @param maxItemsPerRequest The number of tweets to return per request.
          */
         public Builder maxItemsPerRequest(Integer maxItemsPerRequest) {
@@ -143,9 +149,10 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
         /**
          * Sets whether to includeRetweets for the TwitterListTimeline. Defaults to true.
+         *
          * @param includeRetweets When set to false, the timeline will strip any native retweets
-         * (though they will still count toward both the maximal length of the timeline and the
-         * slice selected by the count parameter).
+         *                        (though they will still count toward both the maximal length of the timeline and the
+         *                        slice selected by the count parameter).
          */
         public Builder includeRetweets(Boolean includeRetweets) {
             this.includeRetweets = includeRetweets;
@@ -154,6 +161,7 @@ public class TwitterListTimeline extends BaseTimeline implements Timeline<Tweet>
 
         /**
          * Builds a TwitterListTimeline from the Builder parameters.
+         *
          * @return a TwitterListTimeline.
          * @throws java.lang.IllegalStateException if id or slug/owner pair is not set.
          */

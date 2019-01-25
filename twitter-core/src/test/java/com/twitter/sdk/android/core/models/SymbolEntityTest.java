@@ -29,7 +29,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class SymbolEntityTest  {
+public class SymbolEntityTest {
 
     private static final String TEST_JSON = "{\"indices\":[32,36],\"text\":\"TWTR\"}";
     private static final int TEST_INDICES_START = 32;

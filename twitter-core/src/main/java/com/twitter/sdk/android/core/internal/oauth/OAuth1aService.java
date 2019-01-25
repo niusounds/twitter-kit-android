@@ -105,10 +105,10 @@ public class OAuth1aService extends OAuthService {
      * @param callback The callback interface to invoke when when the request completes.
      */
     public void requestAccessToken(final Callback<OAuthResponse> callback,
-            TwitterAuthToken requestToken, String verifier) {
+                                   TwitterAuthToken requestToken, String verifier) {
         final String url = getAccessTokenUrl();
         final String authHeader = new OAuth1aHeaders().getAuthorizationHeader(getTwitterCore()
-                        .getAuthConfig(), requestToken, null, "POST", url, null);
+                .getAuthConfig(), requestToken, null, "POST", url, null);
 
         api.getAccessToken(authHeader, verifier).enqueue(getCallbackWrapper(callback));
     }
@@ -130,7 +130,7 @@ public class OAuth1aService extends OAuthService {
     }
 
     /**
-     * @return  {@link OAuthResponse} parsed from the
+     * @return {@link OAuthResponse} parsed from the
      * response, may be {@code null} if the response does not contain an auth token and secret.
      */
     public static OAuthResponse parseAuthResponse(String response) {

@@ -135,7 +135,7 @@ public class TweetTextLinkifierTest {
         final CharSequence linkifiedText
                 = TweetTextLinkifier.linkifyUrls(formattedText, null, 0, 0, true, true);
         final String displayUrlFromEntity = linkifiedText.subSequence(hashtagEntity.getStart(),
-                        hashtagEntity.getEnd()).toString();
+                hashtagEntity.getEnd()).toString();
         assertEquals(fullHashtag, displayUrlFromEntity);
     }
 

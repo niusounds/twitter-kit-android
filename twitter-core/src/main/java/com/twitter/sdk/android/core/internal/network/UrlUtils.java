@@ -87,9 +87,9 @@ public final class UrlUtils {
      * Percent encodes by doing the following:
      * 1) url encode string using UTF8
      * 2) apply additional encoding to string, replacing:
-     *      "*" => "%2A"
-     *      "+" => "%20"
-     *      "%7E" => "~"
+     * "*" => "%2A"
+     * "+" => "%20"
+     * "%7E" => "~"
      *
      * @param s the string to encode
      * @return the encoded string

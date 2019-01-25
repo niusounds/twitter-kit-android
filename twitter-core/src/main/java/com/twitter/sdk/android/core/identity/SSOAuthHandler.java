@@ -91,7 +91,7 @@ class SSOAuthHandler extends AuthHandler {
     private static final String EXTRA_CONSUMER_SECRET = "cs";
 
     SSOAuthHandler(TwitterAuthConfig authConfig, Callback<TwitterSession> callback,
-            int requestCode) {
+                   int requestCode) {
         super(authConfig, callback, requestCode);
     }
 
@@ -130,6 +130,7 @@ class SSOAuthHandler extends AuthHandler {
 
     /**
      * Returns an available SSO app package, preferring Twitter for Android, then Twitter Dogfood.
+     *
      * @param pm the PackageManager for checking available app packages.
      * @return the app package name to use for SSO.
      */
@@ -145,6 +146,7 @@ class SSOAuthHandler extends AuthHandler {
 
     /**
      * Returns true if Twitter for Android or Twitter Dogfood is installed.
+     *
      * @param context a context
      * @return true if Twitter is installed; otherwise, false.
      */
@@ -155,7 +157,7 @@ class SSOAuthHandler extends AuthHandler {
     }
 
     private static boolean checkAppSignature(PackageManager pm, String packageName,
-            String requiredSignature) {
+                                             String requiredSignature) {
         final PackageInfo p;
         try {
             p = pm.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);

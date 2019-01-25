@@ -54,7 +54,7 @@ class OAuthController implements OAuthWebViewClient.Listener {
     private final OAuth1aService oAuth1aService;
 
     OAuthController(ProgressBar spinner, WebView webView, TwitterAuthConfig authConfig,
-            OAuth1aService oAuth1aService, Listener listener) {
+                    OAuth1aService oAuth1aService, Listener listener) {
         this.spinner = spinner;
         this.webView = webView;
         this.authConfig = authConfig;

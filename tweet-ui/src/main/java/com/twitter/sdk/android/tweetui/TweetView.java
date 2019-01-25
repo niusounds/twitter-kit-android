@@ -56,6 +56,7 @@ public class TweetView extends BaseTweetView {
      * Render the Tweet by updating the subviews. For any data that is missing from the Tweet,
      * invalidate the subview value (e.g. text views set to empty string) for view recycling.
      * Do not call with render true until inflation has completed.
+     *
      * @throws IllegalArgumentException
      */
     @Override

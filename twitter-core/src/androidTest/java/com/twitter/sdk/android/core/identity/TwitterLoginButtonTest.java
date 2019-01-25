@@ -110,18 +110,18 @@ public class TwitterLoginButtonTest extends AndroidTestCase {
     }
 
     public void testConstructor_editMode() throws Exception {
-            final TwitterLoginButton button = new TwitterLoginButton(getContext()) {
-                @Override
-                protected Activity getActivity() {
-                    return mock(Activity.class);
-                }
+        final TwitterLoginButton button = new TwitterLoginButton(getContext()) {
+            @Override
+            protected Activity getActivity() {
+                return mock(Activity.class);
+            }
 
-                @Override
-                public boolean isInEditMode() {
-                    return true;
-                }
-            };
-            assertTrue(button.isEnabled());
+            @Override
+            public boolean isInEditMode() {
+                return true;
+            }
+        };
+        assertTrue(button.isEnabled());
     }
 
     public void testConstructor_twitterNotStarted() throws Exception {

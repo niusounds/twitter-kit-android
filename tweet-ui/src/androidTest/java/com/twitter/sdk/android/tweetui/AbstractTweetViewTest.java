@@ -68,7 +68,7 @@ public abstract class AbstractTweetViewTest extends TweetUiTestCase {
     abstract AbstractTweetView createViewWithMocks(Context context, Tweet tweet);
 
     abstract AbstractTweetView createViewWithMocks(Context context, Tweet tweet,
-            AbstractTweetView.DependencyProvider dependencyProvider);
+                                                   AbstractTweetView.DependencyProvider dependencyProvider);
 
     private void setUpMockDependencyProvider() {
         mockDependencyProvider = mock(TestDependencyProvider.class);

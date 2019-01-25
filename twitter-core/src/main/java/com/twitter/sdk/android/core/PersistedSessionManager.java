@@ -43,8 +43,8 @@ public class PersistedSessionManager<T extends Session> implements SessionManage
     private volatile boolean restorePending = true;
 
     public PersistedSessionManager(PreferenceStore preferenceStore,
-            SerializationStrategy<T> serializer, String prefKeyActiveSession,
-            String prefKeySession) {
+                                   SerializationStrategy<T> serializer, String prefKeyActiveSession,
+                                   String prefKeySession) {
         this(preferenceStore, serializer, new ConcurrentHashMap<>(NUM_SESSIONS),
                 new ConcurrentHashMap<>(NUM_SESSIONS),
                 new PreferenceStoreStrategy<>(preferenceStore, serializer,
@@ -52,10 +52,10 @@ public class PersistedSessionManager<T extends Session> implements SessionManage
     }
 
     PersistedSessionManager(PreferenceStore preferenceStore,
-            SerializationStrategy<T> serializer, ConcurrentHashMap<Long, T> sessionMap,
-            ConcurrentHashMap<Long, PreferenceStoreStrategy<T>> storageMap,
-            PreferenceStoreStrategy<T> activesSessionStorage,
-            String prefKeySession) {
+                            SerializationStrategy<T> serializer, ConcurrentHashMap<Long, T> sessionMap,
+                            ConcurrentHashMap<Long, PreferenceStoreStrategy<T>> storageMap,
+                            PreferenceStoreStrategy<T> activesSessionStorage,
+                            String prefKeySession) {
         this.preferenceStore = preferenceStore;
         this.serializer = serializer;
         this.sessionMap = sessionMap;

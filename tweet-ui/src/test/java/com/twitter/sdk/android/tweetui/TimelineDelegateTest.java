@@ -656,7 +656,8 @@ public class TimelineDelegateTest {
 
         /**
          * Constructs a FakeItemTimeline
-         * @param numItems the number of TestItems to return per call to next/previous
+         *
+         * @param numItems    the number of TestItems to return per call to next/previous
          * @param minPosition the TimelineCursor minPosition returned by calls to next/previous
          * @param maxPosition the TimelineCursor maxPosition returned by calls to next/previous
          */

@@ -38,20 +38,21 @@ final class TweetTextLinkifier {
     static final Pattern VINE_URL =
             Pattern.compile("^https?://vine\\.co(/#!)?/v/\\w+$");
 
-    private TweetTextLinkifier() {}
+    private TweetTextLinkifier() {
+    }
 
     /**
      * Returns a charSequence with the display urls substituted in place of the t.co links. It will
      * strip off the last photo entity, quote Tweet, and Vine card urls in the text. The return
      * value can be set directly onto a text view.
      *
-     * @param tweetText             The formatted and adjusted tweet wrapper
-     * @param linkListener          A listener to handle link clicks
-     * @param linkColor             The link color
-     * @param linkHighlightColor    The link background color when pressed
-     * @param stripQuoteTweet       If true we should strip the quote Tweet URL
-     * @param stripVineCard         If true we should strip the Vine card URL
-     * @return                      The Tweet text with displayUrls substituted in
+     * @param tweetText          The formatted and adjusted tweet wrapper
+     * @param linkListener       A listener to handle link clicks
+     * @param linkColor          The link color
+     * @param linkHighlightColor The link background color when pressed
+     * @param stripQuoteTweet    If true we should strip the quote Tweet URL
+     * @param stripVineCard      If true we should strip the Vine card URL
+     * @return The Tweet text with displayUrls substituted in
      */
     static CharSequence linkifyUrls(FormattedTweetText tweetText,
                                     final LinkClickListener linkListener,
@@ -104,11 +105,11 @@ final class TweetTextLinkifier {
      *
      * @param urls  Expected to be non-null
      * @param media Can be null
-     * @return      Combined and sorted list of urls and media
+     * @return Combined and sorted list of urls and media
      */
     static List<FormattedUrlEntity> mergeAndSortEntities(final List<FormattedUrlEntity> urls,
-            final List<FormattedMediaEntity> media, final List<FormattedUrlEntity> hashtags,
-            final List<FormattedUrlEntity> mentions, final List<FormattedUrlEntity> symbols) {
+                                                         final List<FormattedMediaEntity> media, final List<FormattedUrlEntity> hashtags,
+                                                         final List<FormattedUrlEntity> mentions, final List<FormattedUrlEntity> symbols) {
         final ArrayList<FormattedUrlEntity> combined = new ArrayList<>(urls);
         combined.addAll(media);
         combined.addAll(hashtags);
@@ -137,10 +138,10 @@ final class TweetTextLinkifier {
      * @param linkHighlightColor The link background color when pressed
      */
     private static void addUrlEntities(final SpannableStringBuilder spannable,
-            final List<FormattedUrlEntity> entities,
-            final FormattedUrlEntity strippedEntity,
-            final LinkClickListener linkListener,
-            final int linkColor, final int linkHighlightColor) {
+                                       final List<FormattedUrlEntity> entities,
+                                       final FormattedUrlEntity strippedEntity,
+                                       final LinkClickListener linkListener,
+                                       final int linkColor, final int linkHighlightColor) {
         if (entities == null || entities.isEmpty()) return;
 
         int offset = 0;

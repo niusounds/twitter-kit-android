@@ -50,8 +50,9 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
     /**
      * Loads Tweets with id greater than (newer than) sinceId. If sinceId is null, loads the newest
      * Tweets.
+     *
      * @param sinceId minimum id of the Tweets to load (exclusive).
-     * @param cb callback.
+     * @param cb      callback.
      */
     @Override
     public void next(Long sinceId, Callback<TimelineResult<Tweet>> cb) {
@@ -60,8 +61,9 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
     /**
      * Loads Tweets with id less than (older than) maxId.
+     *
      * @param maxId maximum id of the Tweets to load (exclusive).
-     * @param cb callback.
+     * @param cb    callback.
      */
     @Override
     public void previous(Long maxId, Callback<TimelineResult<Tweet>> cb) {
@@ -101,6 +103,7 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the userId for the UserTimeline.
+         *
          * @param userId The ID of the user for whom to return results for.
          */
         public Builder userId(Long userId) {
@@ -110,6 +113,7 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the screenName for the UserTimeline.
+         *
          * @param screenName The screen name of the user for whom to return results for.
          */
         public Builder screenName(String screenName) {
@@ -119,8 +123,9 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the number of Tweets returned per request for the UserTimeline.
+         *
          * @param maxItemsPerRequest The number of tweets to return per request, up to a maximum of
-         * 200.
+         *                           200.
          */
         public Builder maxItemsPerRequest(Integer maxItemsPerRequest) {
             this.maxItemsPerRequest = maxItemsPerRequest;
@@ -129,8 +134,9 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets whether to includeReplies for the UserTimeline. Defaults to false.
+         *
          * @param includeReplies true to allow replies to be included in the returned timeline
-         * result.
+         *                       result.
          */
         public Builder includeReplies(Boolean includeReplies) {
             this.includeReplies = includeReplies;
@@ -139,9 +145,10 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets whether to includeRetweets for the UserTimeline. Defaults to true.
+         *
          * @param includeRetweets When set to false, the timeline will strip any native retweets
-         * (though they will still count toward both the maximal length of the timeline and the
-         * slice selected by the count parameter).
+         *                        (though they will still count toward both the maximal length of the timeline and the
+         *                        slice selected by the count parameter).
          */
         public Builder includeRetweets(Boolean includeRetweets) {
             this.includeRetweets = includeRetweets;
@@ -150,6 +157,7 @@ public class UserTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Builds a UserTimeline from the Builder parameters.
+         *
          * @return a UserTimeline.
          */
         public UserTimeline build() {

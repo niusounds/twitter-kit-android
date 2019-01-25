@@ -50,10 +50,10 @@ public final class TestUtils {
 
         when(mockContext.getPackageManager()).thenReturn(mockPm);
         when(mockPm.getPackageInfo(SSOAuthHandler.TWITTER_PACKAGE_NAME,
-            PackageManager.GET_SIGNATURES)).thenReturn(mockPackageInfo);
+                PackageManager.GET_SIGNATURES)).thenReturn(mockPackageInfo);
         when(mockPm.getPackageInfo(SSOAuthHandler.DOGFOOD_PACKAGE_NAME,
                 PackageManager.GET_SIGNATURES))
-            .thenThrow(new PackageManager.NameNotFoundException());
+                .thenThrow(new PackageManager.NameNotFoundException());
         final List<ResolveInfo> activities = new ArrayList<>();
         activities.add(mock(ResolveInfo.class));
         when(mockContext.getPackageManager().queryIntentActivities(any(Intent.class),
@@ -64,7 +64,7 @@ public final class TestUtils {
             throws PackageManager.NameNotFoundException {
         final PackageManager mockPm = mock(PackageManager.class);
         final PackageInfo mockPackageInfo = mock(PackageInfo.class);
-        mockPackageInfo.signatures = new Signature[] {
+        mockPackageInfo.signatures = new Signature[]{
                 new Signature(signature)
         };
         when(mockContext.getPackageManager()).thenReturn(mockPm);
@@ -85,10 +85,10 @@ public final class TestUtils {
 
         when(mockContext.getPackageManager()).thenReturn(mockPm);
         when(mockPm.getPackageInfo(SSOAuthHandler.TWITTER_PACKAGE_NAME,
-            PackageManager.GET_SIGNATURES))
-            .thenThrow(new PackageManager.NameNotFoundException());
+                PackageManager.GET_SIGNATURES))
+                .thenThrow(new PackageManager.NameNotFoundException());
         when(mockPm.getPackageInfo(SSOAuthHandler.DOGFOOD_PACKAGE_NAME,
-            PackageManager.GET_SIGNATURES))
-            .thenThrow(new PackageManager.NameNotFoundException());
+                PackageManager.GET_SIGNATURES))
+                .thenThrow(new PackageManager.NameNotFoundException());
     }
 }

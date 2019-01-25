@@ -52,8 +52,8 @@ class PlayerController {
 
     // Unit testing purposes
     PlayerController(View rootView, VideoView videoView, VideoControlView videoControlView,
-            ProgressBar videoProgressView, TextView callToActionView,
-            SwipeToDismissTouchListener.Callback callback) {
+                     ProgressBar videoProgressView, TextView callToActionView,
+                     SwipeToDismissTouchListener.Callback callback) {
         this.rootView = rootView;
         this.videoView = videoView;
         this.videoControlView = videoControlView;

@@ -68,7 +68,7 @@ public class TwitterLoginButton extends Button {
     }
 
     TwitterLoginButton(Context context, AttributeSet attrs, int defStyle,
-            TwitterAuthClient authClient) {
+                       TwitterAuthClient authClient) {
         super(context, attrs, defStyle);
         this.activityRef = new WeakReference<>(getActivity());
         this.authClient = authClient;
@@ -123,8 +123,8 @@ public class TwitterLoginButton extends Button {
      * is called to complete the authorization flow.
      *
      * @param requestCode the request code used for SSO
-     * @param resultCode the result code returned by the SSO activity
-     * @param data the result data returned by the SSO activity
+     * @param resultCode  the result code returned by the SSO activity
+     * @param data        the result data returned by the SSO activity
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == getTwitterAuthClient().getRequestCode()) {

@@ -56,7 +56,7 @@ public class DateTranslationsTest extends AndroidTestCase {
                 new Locale("pt"), new Locale("ru"), new Locale("sv"), new Locale("th"),
                 new Locale("tl"), new Locale("tr"), new Locale("ur"), new Locale("zh", "CN"),
                 new Locale("zh", "TW"));
-        for (Locale locale: locales) {
+        for (Locale locale : locales) {
             TestUtils.setLocale(getContext(), locale);
             final String shortStr = getContext().getResources()
                     .getString(R.string.tw__relative_date_format_short);

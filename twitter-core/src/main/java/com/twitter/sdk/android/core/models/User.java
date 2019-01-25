@@ -316,19 +316,19 @@ public class User implements Serializable, Identifiable {
     public final String withheldScope;
 
     public User(boolean contributorsEnabled, String createdAt, boolean defaultProfile,
-            boolean defaultProfileImage, String description, String emailAddress,
-            UserEntities entities, int favouritesCount, boolean followRequestSent,
-            int followersCount, int friendsCount, boolean geoEnabled, long id, String idStr,
-            boolean isTranslator, String lang, int listedCount, String location, String name,
-            String profileBackgroundColor, String profileBackgroundImageUrl,
-            String profileBackgroundImageUrlHttps, boolean profileBackgroundTile,
-            String profileBannerUrl, String profileImageUrl, String profileImageUrlHttps,
-            String profileLinkColor, String profileSidebarBorderColor,
-            String profileSidebarFillColor, String profileTextColor,
-            boolean profileUseBackgroundImage, boolean protectedUser, String screenName,
-            boolean showAllInlineMedia, Tweet status, int statusesCount, String timeZone,
-            String url, int utcOffset, boolean verified, List<String> withheldInCountries,
-            String withheldScope) {
+                boolean defaultProfileImage, String description, String emailAddress,
+                UserEntities entities, int favouritesCount, boolean followRequestSent,
+                int followersCount, int friendsCount, boolean geoEnabled, long id, String idStr,
+                boolean isTranslator, String lang, int listedCount, String location, String name,
+                String profileBackgroundColor, String profileBackgroundImageUrl,
+                String profileBackgroundImageUrlHttps, boolean profileBackgroundTile,
+                String profileBannerUrl, String profileImageUrl, String profileImageUrlHttps,
+                String profileLinkColor, String profileSidebarBorderColor,
+                String profileSidebarFillColor, String profileTextColor,
+                boolean profileUseBackgroundImage, boolean protectedUser, String screenName,
+                boolean showAllInlineMedia, Tweet status, int statusesCount, String timeZone,
+                String url, int utcOffset, boolean verified, List<String> withheldInCountries,
+                String withheldScope) {
         this.contributorsEnabled = contributorsEnabled;
         this.createdAt = createdAt;
         this.defaultProfile = defaultProfile;

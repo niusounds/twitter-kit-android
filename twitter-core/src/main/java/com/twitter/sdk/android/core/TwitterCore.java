@@ -92,7 +92,7 @@ public class TwitterCore {
     }
 
     public String getVersion() {
-        return BuildConfig.VERSION_NAME + "." + BuildConfig.BUILD_NUMBER;
+        return BuildConfig.VERSION_NAME;
     }
 
     public TwitterAuthConfig getAuthConfig() {
@@ -145,7 +145,7 @@ public class TwitterCore {
     /**
      * Creates {@link com.twitter.sdk.android.core.TwitterApiClient} from default
      * {@link com.twitter.sdk.android.core.Session}.
-     *
+     * <p>
      * Caches internally for efficient access.
      */
     public TwitterApiClient getApiClient() {
@@ -160,8 +160,9 @@ public class TwitterCore {
     /**
      * Creates {@link com.twitter.sdk.android.core.TwitterApiClient} from authenticated
      * {@link com.twitter.sdk.android.core.Session} provided.
-     *
+     * <p>
      * Caches internally for efficient access.
+     *
      * @param session the session
      */
     public TwitterApiClient getApiClient(TwitterSession session) {
@@ -173,7 +174,7 @@ public class TwitterCore {
 
     /**
      * Add custom {@link com.twitter.sdk.android.core.TwitterApiClient} for guest auth access.
-     *
+     * <p>
      * Only adds guest auth client if it's not already defined. Caches internally for efficient
      * access and storing it in TwitterCore's singleton.
      *
@@ -188,11 +189,11 @@ public class TwitterCore {
     /**
      * Add custom {@link com.twitter.sdk.android.core.TwitterApiClient} for authenticated
      * {@link com.twitter.sdk.android.core.Session} access.
-     *
+     * <p>
      * Only adds session auth client if it's not already defined. Caches internally for efficient
      * access and storing it in TwitterCore's singleton.
      *
-     * @param session the session
+     * @param session                the session
      * @param customTwitterApiClient the custom twitter api client
      */
     public void addApiClient(TwitterSession session, TwitterApiClient customTwitterApiClient) {
@@ -203,7 +204,7 @@ public class TwitterCore {
 
     /**
      * Creates {@link com.twitter.sdk.android.core.TwitterApiClient} using guest authentication.
-     *
+     * <p>
      * Caches internally for efficient access.
      */
     public TwitterApiClient getGuestApiClient() {

@@ -147,9 +147,9 @@ public class SearchTimelineTest {
         // assert searchTimeline call is made with the correct arguments
         verify(twitterCore.getApiClient().getSearchService())
                 .tweets(eq(TEST_QUERY + SearchTimeline.FILTER_RETWEETS),
-                isNull(Geocode.class), eq(TEST_LANG), isNull(String.class),
-                eq(TEST_RESULT_TYPE), eq(TEST_ITEMS_PER_REQUEST), eq(TEST_UNTIL_DATE),
-                eq(TEST_SINCE_ID), eq(TEST_MAX_ID), eq(true));
+                        isNull(Geocode.class), eq(TEST_LANG), isNull(String.class),
+                        eq(TEST_RESULT_TYPE), eq(TEST_ITEMS_PER_REQUEST), eq(TEST_UNTIL_DATE),
+                        eq(TEST_SINCE_ID), eq(TEST_MAX_ID), eq(true));
     }
 
     /* Builder */

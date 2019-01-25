@@ -18,12 +18,11 @@
 package com.twitter.sdk.android.core.services.params;
 
 /**
- *
  * The parameter value is specified by "latitude,longitude,radius", where radius units must be
  * specified as either "mi" (miles) or "km" (kilometers). Note that you cannot use the near
  * operator via the API to geocode arbitrary locations; however you can use this geocode parameter
  * to search near geocodes directly.
- *
+ * <p>
  * Example Values: 37.781157,-122.398720,1mi
  *
  * <a href="https://dev.twitter.com/rest/reference/get/search/tweets">GET search/tweets</a>

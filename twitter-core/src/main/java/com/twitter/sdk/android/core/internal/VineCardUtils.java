@@ -26,7 +26,8 @@ public class VineCardUtils {
     public static final String VINE_CARD = "vine";
     public static final long VINE_USER_ID = 586671909;
 
-    private VineCardUtils() {}
+    private VineCardUtils() {
+    }
 
     public static boolean isVine(Card card) {
         return (PLAYER_CARD.equals(card.name) || VINE_CARD.equals(card.name)) && isVineUser(card);

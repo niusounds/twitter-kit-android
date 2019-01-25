@@ -70,7 +70,7 @@ public class TwitterAuthClient {
         this.sessionManager = sessionManager;
     }
 
-     /**
+    /**
      * Requests authorization.
      *
      * @param activity The {@link android.app.Activity} context to use for the authorization flow.
@@ -129,8 +129,8 @@ public class TwitterAuthClient {
      * is called to complete the authorization flow.
      *
      * @param requestCode the request code used for SSO
-     * @param resultCode the result code returned by the SSO activity
-     * @param data the result data returned by the SSO activity
+     * @param resultCode  the result code returned by the SSO activity
+     * @param data        the result data returned by the SSO activity
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Twitter.getLogger().d(TwitterCore.TAG,
@@ -149,7 +149,7 @@ public class TwitterAuthClient {
     /**
      * Requests the user's email address.
      *
-     * @param session the user session
+     * @param session  the user session
      * @param callback The callback interface to invoke when the request completes. If the user
      *                 denies access to the email address, or the email address is not available,
      *                 an error is returned.
@@ -177,7 +177,7 @@ public class TwitterAuthClient {
         private final Callback<TwitterSession> callback;
 
         CallbackWrapper(SessionManager<TwitterSession> sessionManager,
-                Callback<TwitterSession> callback) {
+                        Callback<TwitterSession> callback) {
             this.sessionManager = sessionManager;
             this.callback = callback;
         }

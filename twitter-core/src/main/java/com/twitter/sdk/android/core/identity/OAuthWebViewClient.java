@@ -33,7 +33,9 @@ class OAuthWebViewClient extends WebViewClient {
 
     interface Listener {
         void onPageFinished(WebView webView, String url);
+
         void onSuccess(Bundle bundle);
+
         void onError(WebViewException exception);
     }
 
@@ -68,7 +70,7 @@ class OAuthWebViewClient extends WebViewClient {
 
     @Override
     public void onReceivedError(WebView view, int errorCode,
-            String description, String failingUrl) {
+                                String description, String failingUrl) {
         super.onReceivedError(view, errorCode, description, failingUrl);
         listener.onError(new WebViewException(errorCode, description, failingUrl));
     }

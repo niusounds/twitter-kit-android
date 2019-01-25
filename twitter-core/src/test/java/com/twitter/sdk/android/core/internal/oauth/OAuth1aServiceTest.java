@@ -287,7 +287,7 @@ public class OAuth1aServiceTest {
 
         @Override
         public Call<ResponseBody> getAccessToken(@Header(OAuthConstants.HEADER_AUTHORIZATION) String auth,
-                @Query(OAuthConstants.PARAM_VERIFIER) String verifier) {
+                                                 @Query(OAuthConstants.PARAM_VERIFIER) String verifier) {
             final ResponseBody responseBody = ResponseBody.create(MediaType.parse("application/json"), "");
             return Calls.response(Response.success(responseBody));
         }

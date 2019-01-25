@@ -32,7 +32,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
 @RunWith(RobolectricTestRunner.class)
-public class OAuth1aHeadersTest  {
+public class OAuth1aHeadersTest {
     private static final String VERIFY_CREDENTIALS_URL = "api.twitter.com";
     private static final String ANY_AUTH_CREDENTIALS = "auth_credentials";
     private OAuth1aParameters oAuth1aParameters;
@@ -82,7 +82,7 @@ public class OAuth1aHeadersTest  {
         @Override
         OAuth1aParameters getOAuth1aParameters(TwitterAuthConfig authConfig, TwitterAuthToken
                 authToken, String callback, String method, String url,
-                Map<String, String> postParams) {
+                                               Map<String, String> postParams) {
             return oAuth1aParameters;
         }
     }

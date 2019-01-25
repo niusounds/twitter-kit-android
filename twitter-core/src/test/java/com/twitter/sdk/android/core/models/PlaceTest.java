@@ -98,7 +98,7 @@ public class PlaceTest {
     private void assertBoundingBox(Place.BoundingBox boundingBox) {
         assertEquals(EXPECTED_BOUNDING_BOX_TYPE, boundingBox.type);
         assertEquals(4, boundingBox.coordinates.get(0).size());
-        for (List<Double> d: boundingBox.coordinates.get(0)) {
+        for (List<Double> d : boundingBox.coordinates.get(0)) {
             assertEquals(EXPECTED_BOUNDING_BOX_LONGITUDE, d.get(0));
             assertEquals(EXPECTED_BOUNDING_BOX_LATITUDE, d.get(1));
         }

@@ -29,7 +29,6 @@ public class GuestSession extends Session<GuestAuthToken> {
 
     /**
      * @param authToken Auth token
-     *
      * @throws java.lang.IllegalArgumentException if token argument is null
      */
     public GuestSession(GuestAuthToken authToken) {

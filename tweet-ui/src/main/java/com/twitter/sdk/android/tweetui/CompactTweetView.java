@@ -38,7 +38,7 @@ public class CompactTweetView extends BaseTweetView {
     }
 
     CompactTweetView(Context context, Tweet tweet, int styleResId,
-            DependencyProvider dependencyProvider) {
+                     DependencyProvider dependencyProvider) {
         super(context, tweet, styleResId, dependencyProvider);
     }
 
@@ -80,6 +80,7 @@ public class CompactTweetView extends BaseTweetView {
     /**
      * Returns the desired aspect ratio of the Tweet media entity according to "sizes" metadata
      * and the aspect ratio display rules.
+     *
      * @param photoEntity the first
      * @return the target image and bitmap width to height aspect ratio
      */

@@ -26,7 +26,8 @@ import java.util.Map;
  */
 public final class ModelUtils {
 
-    private ModelUtils() {}
+    private ModelUtils() {
+    }
 
     public static <T> List<T> getSafeList(List<T> entities) {
         if (entities == null) {

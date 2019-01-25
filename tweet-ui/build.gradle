@@ -19,7 +19,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         versionCode 1
@@ -32,15 +31,12 @@ android {
         debug {
             buildConfigField "String", "GROUP", "\"${pom_group_id}\""
             buildConfigField "String", "ARTIFACT_ID", "\"${pom_artifact_id}\""
-            buildConfigField "String", "BUILD_NUMBER", "\"${buildNumber}\""
             buildConfigField "long", "BUILD_TIME", "${System.currentTimeMillis()}L"
 
-            testCoverageEnabled enableTestCodeCoverage
         }
         release {
             buildConfigField "String", "GROUP", "\"${pom_group_id}\""
             buildConfigField "String", "ARTIFACT_ID", "\"${pom_artifact_id}\""
-            buildConfigField "String", "BUILD_NUMBER", "\"${buildNumber}\""
             buildConfigField "long", "BUILD_TIME", "${System.currentTimeMillis()}L"
         }
     }
@@ -50,8 +46,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility rootProject.sourceCompatibilityVersion
-        targetCompatibility rootProject.targetCompatibilityVersion
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 
     // Forcibly add debug and the generated "R" files onto the test classpath
@@ -69,19 +65,15 @@ android {
 dependencies {
     api project(':twitter-core')
 
-    implementation dependency.picasso
-    implementation dependency.supportCoreV4
-    implementation dependency.supportCompatV4
-    implementation dependency.recyclerview
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
-    androidTestCompile dependency.retrofitMock
-    androidTestCompile dependency.mockito
-    androidTestCompile dependency.dexmakerMockito
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "androidx.appcompat:appcompat:1.0.2"
 
-    testCompile dependency.mockito
-    testCompile dependency.junit
-    testCompile(dependency.robolectric) {
-        exclude group: 'commons-logging', module: 'commons-logging'
-        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
-    }
+    testImplementation "org.hamcrest:hamcrest-all:1.3"
+
+    testImplementation "junit:junit:4.12"
+    androidTestImplementation "androidx.test:runner:1.1.1"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.1.1"
+
 }

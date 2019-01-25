@@ -29,7 +29,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-public class HashTagEntityTest  {
+public class HashTagEntityTest {
 
     private static final String TEST_JSON = "{\"indices\":[32,36],\"text\":\"lol\"}";
     private static final int TEST_INDICES_START = 32;

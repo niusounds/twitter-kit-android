@@ -287,15 +287,15 @@ public class Tweet implements Identifiable {
     }
 
     public Tweet(Coordinates coordinates, String createdAt, Object currentUserRetweet,
-            TweetEntities entities, TweetEntities extendedEntities, Integer favoriteCount,
-            boolean favorited, String filterLevel, long id, String idStr,
-            String inReplyToScreenName, long inReplyToStatusId, String inReplyToStatusIdStr,
-            long inReplyToUserId, String inReplyToUserIdStr, String lang, Place place,
-            boolean possiblySensitive, Object scopes, long quotedStatusId, String quotedStatusIdStr,
-            Tweet quotedStatus, int retweetCount, boolean retweeted, Tweet retweetedStatus,
-            String source, String text, List<Integer> displayTextRange, boolean truncated,
-            User user, boolean withheldCopyright, List<String> withheldInCountries,
-            String withheldScope, Card card) {
+                 TweetEntities entities, TweetEntities extendedEntities, Integer favoriteCount,
+                 boolean favorited, String filterLevel, long id, String idStr,
+                 String inReplyToScreenName, long inReplyToStatusId, String inReplyToStatusIdStr,
+                 long inReplyToUserId, String inReplyToUserIdStr, String lang, Place place,
+                 boolean possiblySensitive, Object scopes, long quotedStatusId, String quotedStatusIdStr,
+                 Tweet quotedStatus, int retweetCount, boolean retweeted, Tweet retweetedStatus,
+                 String source, String text, List<Integer> displayTextRange, boolean truncated,
+                 User user, boolean withheldCopyright, List<String> withheldInCountries,
+                 String withheldScope, Card card) {
         this.coordinates = coordinates;
         this.createdAt = createdAt;
         this.currentUserRetweet = currentUserRetweet;

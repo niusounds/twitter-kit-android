@@ -24,11 +24,10 @@ import java.io.InputStream;
 
 /**
  * A rule for accessing test resources needed by unit tests.
- *
+ * <p>
  * Add this as a public member variable annotated with @Rule. For example:
  *
- * @Rule
- * public final TestResources mTestResources = new TestResources();
+ * @Rule public final TestResources mTestResources = new TestResources();
  */
 public class TestResources implements TestRule {
     @Override

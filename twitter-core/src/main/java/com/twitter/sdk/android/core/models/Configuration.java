@@ -60,7 +60,7 @@ public class Configuration {
     }
 
     public Configuration(int dmTextCharacterLimit, List<String> nonUsernamePaths,
-            long photoSizeLimit, MediaEntity.Sizes photoSizes, int shortUrlLengthHttps) {
+                         long photoSizeLimit, MediaEntity.Sizes photoSizes, int shortUrlLengthHttps) {
         this.dmTextCharacterLimit = dmTextCharacterLimit;
         this.nonUsernamePaths = ModelUtils.getSafeList(nonUsernamePaths);
         this.photoSizeLimit = photoSizeLimit;

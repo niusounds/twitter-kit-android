@@ -46,7 +46,8 @@ class FilterTimelineDelegate extends TimelineDelegate<Tweet> {
     /**
      * Constructs a FilterTimelineDelegate with a timeline for requesting data and timelineFilter to
      * filter tweets
-     * @param timeline Timeline source
+     *
+     * @param timeline       Timeline source
      * @param timelineFilter a timelineFilter for filtering tweets from timeline
      * @throws java.lang.IllegalArgumentException if timeline is null
      */
@@ -63,14 +64,14 @@ class FilterTimelineDelegate extends TimelineDelegate<Tweet> {
         // load latest timeline items and replace existing items
         loadNext(timelineStateHolder.positionForNext(),
                 new TimelineFilterCallback(new RefreshCallback(developerCb, timelineStateHolder),
-                timelineFilter));
+                        timelineFilter));
     }
 
     @Override
     public void next(Callback<TimelineResult<Tweet>> developerCb) {
         loadNext(timelineStateHolder.positionForNext(),
-            new TimelineFilterCallback(new NextCallback(developerCb, timelineStateHolder),
-                    timelineFilter));
+                new TimelineFilterCallback(new NextCallback(developerCb, timelineStateHolder),
+                        timelineFilter));
     }
 
     @Override

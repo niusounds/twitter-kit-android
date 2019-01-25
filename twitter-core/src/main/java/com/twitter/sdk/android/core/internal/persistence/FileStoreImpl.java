@@ -36,7 +36,6 @@ public class FileStoreImpl implements FileStore {
     }
 
     /**
-     *
      * @return Directory to store internal cache files.
      */
     @Override
@@ -59,7 +58,6 @@ public class FileStoreImpl implements FileStore {
     }
 
     /**
-     *
      * @return Directory to store internal files.
      */
     @Override

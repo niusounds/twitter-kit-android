@@ -40,7 +40,7 @@ public class MediaEntity extends UrlEntity {
 
     /**
      * A http:// URL pointing directly to the uploaded media file.
-     *
+     * <p>
      * For media in direct messages, media_url is the same https URL as media_url_https and must be
      * accessed via an authenticated twitter.com session or by signing a request with the user's
      * access token using OAuth 1.0A. It is not possible to directly embed these images in a web
@@ -51,7 +51,7 @@ public class MediaEntity extends UrlEntity {
 
     /**
      * A https:// URL pointing directly to the uploaded media file, for embedding on https pages.
-     *
+     * <p>
      * For media in direct messages, media_url_https must be accessed via an authenticated
      * twitter.com session or by signing a request with the user's access token using OAuth 1.0A.
      * It is not possible to directly embed these images in a web page.
@@ -96,9 +96,9 @@ public class MediaEntity extends UrlEntity {
     public final String altText;
 
     public MediaEntity(String url, String expandedUrl, String displayUrl, int start, int end,
-            long id, String idStr, String mediaUrl, String mediaUrlHttps, Sizes sizes,
-            long sourceStatusId, String sourceStatusIdStr, String type, VideoInfo videoInfo,
-            String altText) {
+                       long id, String idStr, String mediaUrl, String mediaUrlHttps, Sizes sizes,
+                       long sourceStatusId, String sourceStatusIdStr, String type, VideoInfo videoInfo,
+                       String altText) {
         super(url, expandedUrl, displayUrl, start, end);
         this.id = id;
         this.idStr = idStr;

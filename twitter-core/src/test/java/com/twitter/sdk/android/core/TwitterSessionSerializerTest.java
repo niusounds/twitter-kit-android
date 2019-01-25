@@ -27,7 +27,7 @@ import static org.junit.Assert.assertNull;
 
 
 @RunWith(RobolectricTestRunner.class)
-public class TwitterSessionSerializerTest  {
+public class TwitterSessionSerializerTest {
     // static unix timestamp so that tests are repeatable and more easily debugged
     private static final long CREATED_AT = 1414450780L;
     public static final String SESSION_JSON = "{\"user_name\":\"\","
@@ -38,11 +38,11 @@ public class TwitterSessionSerializerTest  {
             + "\"id\":-1}";
     public static final String FULL_SESSION_JSON =
             "{\"user_name\":\"" + TestFixtures.SCREEN_NAME + "\","
-            + "\"auth_token\":{"
-            + "\"token\":\"" + TestFixtures.TOKEN + "\","
-            + "\"secret\":\"" + TestFixtures.SECRET + "\","
-            + "\"created_at\":" + CREATED_AT + "},"
-            + "\"id\":" + TestFixtures.USER_ID + "}";
+                    + "\"auth_token\":{"
+                    + "\"token\":\"" + TestFixtures.TOKEN + "\","
+                    + "\"secret\":\"" + TestFixtures.SECRET + "\","
+                    + "\"created_at\":" + CREATED_AT + "},"
+                    + "\"id\":" + TestFixtures.USER_ID + "}";
     public static final String SESSION_JSON_NULL_USERNAME = "{\"auth_token\":{"
             + "\"token\":\"token\","
             + "\"secret\":\"secret\","
@@ -70,7 +70,7 @@ public class TwitterSessionSerializerTest  {
     public void testDeserialize_session() throws Exception {
         final TwitterSession session = serializer.deserialize(FULL_SESSION_JSON);
         assertEquals(new TwitterSession(new TwitterAuthToken(TestFixtures.TOKEN,
-                TestFixtures.SECRET, CREATED_AT), TestFixtures.USER_ID, TestFixtures.SCREEN_NAME),
+                        TestFixtures.SECRET, CREATED_AT), TestFixtures.USER_ID, TestFixtures.SCREEN_NAME),
                 session);
     }
 

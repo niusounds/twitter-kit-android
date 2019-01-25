@@ -22,19 +22,16 @@ import android.content.SharedPreferences;
 public interface PreferenceStore {
 
     /**
-     *
      * @return {@link android.content.SharedPreferences}
      */
     SharedPreferences get();
 
     /**
-     *
      * @return {@link android.content.SharedPreferences.Editor}
      */
     SharedPreferences.Editor edit();
 
     /**
-     *
      * @param editor to save
      * @return successful save
      */

@@ -50,7 +50,7 @@ public class UserUtilsTest {
     @Test
     public void testGetProfileImageUrlHttps_reasonablySmall() {
         final String reasonableSize = "https://pbs.twimg.com/profile_images/2284174872/" +
-                  "7df3h38zabcvjylnyfe3_reasonably_small.png";
+                "7df3h38zabcvjylnyfe3_reasonably_small.png";
         assertEquals(reasonableSize,
                 UserUtils.getProfileImageUrlHttps(user, UserUtils.AvatarSize.REASONABLY_SMALL));
     }

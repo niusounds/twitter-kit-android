@@ -25,8 +25,9 @@ import com.twitter.sdk.android.core.models.Tweet;
 public interface TweetLinkClickListener {
     /**
      * Called when URL clicked.
+     *
      * @param tweet The Tweet that was clicked.
-     * @param url The URL that was clicked.
+     * @param url   The URL that was clicked.
      */
     void onLinkClick(Tweet tweet, String url);
 }

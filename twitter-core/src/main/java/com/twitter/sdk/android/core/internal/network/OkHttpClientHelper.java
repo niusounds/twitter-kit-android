@@ -31,7 +31,7 @@ public class OkHttpClientHelper {
     }
 
     public static OkHttpClient getOkHttpClient(Session<? extends TwitterAuthToken> session,
-            TwitterAuthConfig authConfig) {
+                                               TwitterAuthConfig authConfig) {
         if (session == null) {
             throw new IllegalArgumentException("Session must not be null.");
         }
@@ -40,7 +40,7 @@ public class OkHttpClientHelper {
     }
 
     public static OkHttpClient getCustomOkHttpClient(OkHttpClient httpClient,
-            GuestSessionProvider guestSessionProvider) {
+                                                     GuestSessionProvider guestSessionProvider) {
         if (httpClient == null) {
             throw new IllegalArgumentException("HttpClient must not be null.");
         }

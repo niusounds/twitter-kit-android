@@ -34,7 +34,7 @@ class OAuthHandler extends AuthHandler {
      * @param callback   The listener to callback when authorization completes.
      */
     OAuthHandler(TwitterAuthConfig authConfig, Callback<TwitterSession> callback,
-            int requestCode) {
+                 int requestCode) {
         super(authConfig, callback, requestCode);
     }
 

@@ -43,7 +43,7 @@ public class OAuth1aInterceptor implements Interceptor {
     final TwitterAuthConfig authConfig;
 
     public OAuth1aInterceptor(Session<? extends TwitterAuthToken> session,
-            TwitterAuthConfig authConfig) {
+                              TwitterAuthConfig authConfig) {
         this.session = session;
         this.authConfig = authConfig;
     }

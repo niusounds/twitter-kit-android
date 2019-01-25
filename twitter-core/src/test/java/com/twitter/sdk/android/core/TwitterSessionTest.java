@@ -26,7 +26,7 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.fail;
 
 @RunWith(RobolectricTestRunner.class)
-public class TwitterSessionTest  {
+public class TwitterSessionTest {
 
     @Test
     public void testConstructor_noAuthToken() throws Exception {

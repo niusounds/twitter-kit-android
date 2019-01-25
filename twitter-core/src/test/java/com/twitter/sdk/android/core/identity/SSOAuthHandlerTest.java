@@ -42,7 +42,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(RobolectricTestRunner.class)
-public class SSOAuthHandlerTest  {
+public class SSOAuthHandlerTest {
 
     private static final int REQUEST_CODE = TwitterAuthConfig.DEFAULT_AUTH_REQUEST_CODE;
     private static final String INVALID_SIGNATURE = "AAAAAAAAAA";

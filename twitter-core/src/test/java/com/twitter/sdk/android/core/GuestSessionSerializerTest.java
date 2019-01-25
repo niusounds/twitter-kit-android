@@ -36,8 +36,8 @@ public class GuestSessionSerializerTest {
             + "\"access_token\":\"accessToken\",\"created_at\":1414450780}},\"id\":0}";
     private static final String JSON_SESSION_INVALID_AUTH_TYPE =
             "{\"auth_token\":{\"auth_type\":\"INVALID\","
-            + "\"auth_token\":{\"guest_token\":\"guestToken\",\"access_token\":\"accessToken\","
-            + "\"token_type\":\"tokenType\",\"created_at\":1414450780}},\"id\":0}";
+                    + "\"auth_token\":{\"guest_token\":\"guestToken\",\"access_token\":\"accessToken\","
+                    + "\"token_type\":\"tokenType\",\"created_at\":1414450780}},\"id\":0}";
 
     private static final String TEST_TOKEN_TYPE = "tokenType";
     private static final String TEST_ACCESS_TOKEN = "accessToken";

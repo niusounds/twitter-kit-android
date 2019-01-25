@@ -49,7 +49,7 @@ public class BindingValues {
     public <T> T get(String key) {
         try {
             return (T) bindingValues.get(key);
-        } catch (ClassCastException ex){
+        } catch (ClassCastException ex) {
             return null;
         }
     }

@@ -63,8 +63,9 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
     /**
      * Loads Tweets with id greater than (newer than) sinceId. If sinceId is null, loads the newest
      * Tweets.
+     *
      * @param sinceId minimum id of the Tweets to load (exclusive).
-     * @param cb callback.
+     * @param cb      callback.
      */
     @Override
     public void next(Long sinceId, Callback<TimelineResult<Tweet>> cb) {
@@ -73,8 +74,9 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
     /**
      * Loads Tweets with id less than (older than) maxId.
+     *
      * @param maxId maximum id of the Tweets to load (exclusive).
-     * @param cb callback.
+     * @param cb    callback.
      */
     @Override
     public void previous(Long maxId, Callback<TimelineResult<Tweet>> cb) {
@@ -98,6 +100,7 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Constructs a SearchCallback
+         *
          * @param cb A Callback which expects a TimelineResult
          */
         SearchCallback(Callback<TimelineResult<Tweet>> cb) {
@@ -161,8 +164,9 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the query for the SearchTimeline.
+         *
          * @param query A UTF-8, URL-encoded search query of 500 characters maximum, including
-         * operators. Queries may additionally be limited by complexity.
+         *              operators. Queries may additionally be limited by complexity.
          */
         public Builder query(String query) {
             this.query = query;
@@ -171,6 +175,7 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the geocode for the SearchTimeline.
+         *
          * @param geocode Restricts query to a given geolocation
          */
         public Builder geocode(Geocode geocode) {
@@ -179,8 +184,8 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
         }
 
         /**
-         *  The result_type parameter allows one to choose if the result set will be represented by
-         *  recent or popular Tweets, or a mix of both.
+         * The result_type parameter allows one to choose if the result set will be represented by
+         * recent or popular Tweets, or a mix of both.
          *
          * @param resultType possible options include recent, popular, mixed, or filtered.
          */
@@ -192,8 +197,9 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the languageCode for the SearchTimeline.
+         *
          * @param languageCode Restricts tweets to the given language, given by an ISO 639-1 code.
-         * Language detection is best-effort.
+         *                     Language detection is best-effort.
          */
         public Builder languageCode(String languageCode) {
             this.lang = languageCode;
@@ -202,8 +208,9 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Sets the number of Tweets returned per request for the SearchTimeline.
+         *
          * @param maxItemsPerRequest The number of tweets to return per request, up to a maximum of
-         * 100.
+         *                           100.
          */
         public Builder maxItemsPerRequest(Integer maxItemsPerRequest) {
             this.maxItemsPerRequest = maxItemsPerRequest;
@@ -223,6 +230,7 @@ public class SearchTimeline extends BaseTimeline implements Timeline<Tweet> {
 
         /**
          * Builds a SearchTimeline from the Builder parameters.
+         *
          * @return a SearchTimeline.
          * @throws java.lang.IllegalStateException if query is not set (is null).
          */

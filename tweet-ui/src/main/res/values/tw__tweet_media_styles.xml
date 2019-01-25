@@ -15,9 +15,7 @@
   ~
   -->
 
-<resources
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
     <style name="tw__TweetAvatar" tools:ignore="NewApi">
         <item name="android:layout_width">@dimen/tw__tweet_avatar_size</item>
@@ -55,7 +53,8 @@
 
     <style name="tw__TweetMediaContainer.Quote">
         <item name="android:layout_marginBottom">@dimen/tw__quote_tweet_media_margin_bottom</item>
-        <item name="android:layout_marginRight">@dimen/tw__quote_tweet_media_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/tw__quote_tweet_media_margin_horizontal
+        </item>
         <item name="android:layout_marginLeft">@dimen/tw__quote_tweet_media_margin_horizontal</item>
     </style>
 
@@ -64,16 +63,20 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:visibility">gone</item>
         <item name="android:layout_marginLeft">@dimen/tw__tweet_quote_tweet_margin_horizontal</item>
-        <item name="android:layout_marginRight">@dimen/tw__tweet_quote_tweet_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/tw__tweet_quote_tweet_margin_horizontal
+        </item>
         <item name="android:layout_marginTop">@dimen/tw__tweet_quote_tweet_margin_top</item>
     </style>
 
-    <style name="tw__QuoteTweetContainer.Compact"
-        tools:ignore="NewApi">
-        <item name="android:layout_marginLeft">@dimen/tw__compact_tweet_quote_tweet_margin_left</item>
-        <item name="android:layout_marginStart">@dimen/tw__compact_tweet_quote_tweet_margin_left</item>
-        <item name="android:layout_marginRight">@dimen/tw__compact_tweet_quote_tweet_margin_right</item>
-        <item name="android:layout_marginEnd">@dimen/tw__compact_tweet_quote_tweet_margin_right</item>
+    <style name="tw__QuoteTweetContainer.Compact" tools:ignore="NewApi">
+        <item name="android:layout_marginLeft">@dimen/tw__compact_tweet_quote_tweet_margin_left
+        </item>
+        <item name="android:layout_marginStart">@dimen/tw__compact_tweet_quote_tweet_margin_left
+        </item>
+        <item name="android:layout_marginRight">@dimen/tw__compact_tweet_quote_tweet_margin_right
+        </item>
+        <item name="android:layout_marginEnd">@dimen/tw__compact_tweet_quote_tweet_margin_right
+        </item>
     </style>
 
     <style name="tw__TweetMedia">
@@ -106,8 +109,7 @@
 
     <!--Compact Styles-->
 
-    <style name="tw__TweetAvatar.Compact" parent="tw__TweetAvatar"
-        tools:ignore="NewApi">
+    <style name="tw__TweetAvatar.Compact" parent="tw__TweetAvatar" tools:ignore="NewApi">
         <item name="android:layout_width">@dimen/tw__tweet_avatar_size</item>
         <item name="android:layout_height">@dimen/tw__tweet_avatar_size</item>
         <item name="android:layout_marginTop">@dimen/tw__compact_tweet_avatar_margin_top</item>
@@ -118,8 +120,7 @@
         <item name="android:focusable">false</item>
     </style>
 
-    <style name="tw__TwitterLogo.Compact"
-        tools:ignore="NewApi">
+    <style name="tw__TwitterLogo.Compact" tools:ignore="NewApi">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/tw__compact_tweet_logo_margin_top</item>

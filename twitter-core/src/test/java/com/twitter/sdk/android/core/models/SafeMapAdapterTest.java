@@ -33,7 +33,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
-public class SafeMapAdapterTest  {
+public class SafeMapAdapterTest {
     private static final String TEST_JSON_MAP_EMPTY = "{\"map\":{}}";
     private static final String TEST_JSON_MAP_STRING_VALUES
             = "{\"map\": {\"k1\": \"v1\",\"k2\": \"v2\"}}";

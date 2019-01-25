@@ -141,7 +141,7 @@ public final class TweetMediaUtils {
     public static boolean isLooping(MediaEntity mediaEntity) {
         return GIF_TYPE.equals(mediaEntity.type) ||
                 VIDEO_TYPE.endsWith(mediaEntity.type) &&
-                mediaEntity.videoInfo.durationMillis < LOOP_VIDEO_IN_MILLIS;
+                        mediaEntity.videoInfo.durationMillis < LOOP_VIDEO_IN_MILLIS;
     }
 
     public static boolean showVideoControls(MediaEntity mediaEntity) {

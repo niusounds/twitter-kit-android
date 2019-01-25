@@ -359,14 +359,14 @@ public class VideoView extends SurfaceView
 
     private GestureDetector gestureDetector = new GestureDetector(getContext(),
             new GestureDetector.SimpleOnGestureListener() {
-        @Override
-        public boolean onSingleTapUp(MotionEvent e) {
-            if (isInPlaybackState() && mMediaController != null) {
-                toggleMediaControlsVisiblity();
-            }
-            return false;
-        }
-    });
+                @Override
+                public boolean onSingleTapUp(MotionEvent e) {
+                    if (isInPlaybackState() && mMediaController != null) {
+                        toggleMediaControlsVisiblity();
+                    }
+                    return false;
+                }
+            });
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
@@ -418,7 +418,7 @@ public class VideoView extends SurfaceView
 
     SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback() {
         public void surfaceChanged(SurfaceHolder holder, int format,
-                int w, int h) {
+                                   int w, int h) {
             mSurfaceWidth = w;
             mSurfaceHeight = h;
             boolean isValidState = (mTargetState == STATE_PLAYING);

@@ -33,7 +33,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
-public class SafeListAdapterTest  {
+public class SafeListAdapterTest {
 
     private static final String TEST_JSON_LIST_NULL = "{\"list\":null}";
     private static final String TEST_JSON_LIST_EMPTY = "{\"list\":[]}";

@@ -41,7 +41,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyZeroInteractions;
 
 @RunWith(RobolectricTestRunner.class)
-public class AuthHandlerTest  {
+public class AuthHandlerTest {
     private static final TwitterAuthConfig AUTH_CONFIG
             = new TwitterAuthConfig("consumerKey", "consumerSecret");
     private static final int TEST_REQUEST_CODE = 1;
@@ -90,7 +90,7 @@ public class AuthHandlerTest  {
     }
 
     private void assertCallbackFailureErrorMsg(Callback<TwitterSession> mockCallback,
-            String expectedErrorMsg) {
+                                               String expectedErrorMsg) {
         final ArgumentCaptor<TwitterAuthException> argCaptor
                 = ArgumentCaptor.forClass(TwitterAuthException.class);
         verify(mockCallback).failure(argCaptor.capture());

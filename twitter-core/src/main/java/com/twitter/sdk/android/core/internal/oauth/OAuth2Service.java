@@ -59,6 +59,7 @@ public class OAuth2Service extends OAuthService {
 
     /**
      * Requests a guest auth token.
+     *
      * @param callback The callback interface to invoke when when the request completes.
      */
     public void requestGuestAuthToken(final Callback<GuestAuthToken> callback) {
@@ -113,11 +114,11 @@ public class OAuth2Service extends OAuthService {
     /**
      * Requests a guest token.
      *
-     * @param callback The callback interface to invoke when when the request completes.
+     * @param callback     The callback interface to invoke when when the request completes.
      * @param appAuthToken The application-only auth token.
      */
     void requestGuestToken(final Callback<GuestTokenResponse> callback,
-            OAuth2Token appAuthToken) {
+                           OAuth2Token appAuthToken) {
         api.getGuestToken(getAuthorizationHeader(appAuthToken)).enqueue(callback);
     }
 
@@ -132,8 +133,8 @@ public class OAuth2Service extends OAuthService {
         final TwitterAuthConfig authConfig = getTwitterCore().getAuthConfig();
         final ByteString string = ByteString.encodeUtf8(
                 UrlUtils.percentEncode(authConfig.getConsumerKey())
-                + ":"
-                + UrlUtils.percentEncode(authConfig.getConsumerSecret()));
+                        + ":"
+                        + UrlUtils.percentEncode(authConfig.getConsumerSecret()));
 
         return OAuthConstants.AUTHORIZATION_BASIC + " " + string.base64();
     }

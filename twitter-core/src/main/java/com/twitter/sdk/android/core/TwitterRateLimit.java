@@ -24,7 +24,7 @@ import okhttp3.Headers;
  *
  * @see <a href="https://dev.twitter.com/rest/public/rate-limiting">Rate Limiting</a>
  */
-public class TwitterRateLimit  {
+public class TwitterRateLimit {
 
     private static final String LIMIT_KEY = "x-rate-limit-limit";
     private static final String REMAINING_KEY = "x-rate-limit-remaining";

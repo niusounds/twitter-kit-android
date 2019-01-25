@@ -44,7 +44,7 @@ public class OAuthSigning {
     }
 
     OAuthSigning(TwitterAuthConfig authConfig, TwitterAuthToken authToken,
-            OAuth1aHeaders oAuth1aHeaders) {
+                 OAuth1aHeaders oAuth1aHeaders) {
         if (authConfig == null) {
             throw new IllegalArgumentException("authConfig must not be null");
         }
@@ -60,19 +60,19 @@ public class OAuthSigning {
     /**
      * Gets authorization header for inclusion in HTTP request headers.
      *
-     * @param method The HTTP method.
-     * @param url The url.
+     * @param method     The HTTP method.
+     * @param url        The url.
      * @param postParams The post parameters.
      */
     public String getAuthorizationHeader(String method, String url,
-            Map<String, String> postParams) {
+                                         Map<String, String> postParams) {
         return oAuth1aHeaders.getAuthorizationHeader(authConfig, authToken, null, method, url,
                 postParams);
     }
 
     /**
      * Returns OAuth Echo header using given parameters.
-     *
+     * <p>
      * OAuth Echo allows you to securely delegate an API request to a third party. For example,
      * you may wish to verify a users credentials from your backend (i.e. the third party). This
      * method provides the OAuth parameters required to make an authenticated request from your
@@ -85,7 +85,7 @@ public class OAuthSigning {
      * @see <a href="https://dev.twitter.com/oauth/echo">OAuth Echo</a>
      */
     public Map<String, String> getOAuthEchoHeaders(String method, String url,
-            Map<String, String> postParams) {
+                                                   Map<String, String> postParams) {
         return oAuth1aHeaders.getOAuthEchoHeaders(authConfig, authToken, null, method, url,
                 postParams);
     }

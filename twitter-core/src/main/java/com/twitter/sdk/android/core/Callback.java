@@ -35,7 +35,7 @@ import retrofit2.Response;
 public abstract class Callback<T> implements retrofit2.Callback<T> {
 
     @Override
-    public final void onResponse(Call<T> call, Response<T> response){
+    public final void onResponse(Call<T> call, Response<T> response) {
         if (response.isSuccessful()) {
             success(new Result<>(response.body(), response));
         } else {

@@ -33,14 +33,15 @@ public interface MediaService {
      * parameters are mutually exclusive. Media uploads for images are limited to 5MB in file
      * size.
      * Supported MIME-types are PNG, JPEG, BMP, WEBP, GIF, and Animated Gif
-     * @param media the raw binary file content to upload. Cannot be used with the mediaData
-     *              parameter.
+     *
+     * @param media     the raw binary file content to upload. Cannot be used with the mediaData
+     *                  parameter.
      * @param mediaData the base64-encoded file content to upload. Cannot be used with the media
      *                  parameter
      */
     @Multipart
     @POST("https://upload.twitter.com/1.1/media/upload.json")
     Call<Media> upload(@Part("media") RequestBody media,
-                @Part("media_data") RequestBody mediaData,
-                @Part("additional_owners") RequestBody additionalOwners);
+                       @Part("media_data") RequestBody mediaData,
+                       @Part("additional_owners") RequestBody additionalOwners);
 }

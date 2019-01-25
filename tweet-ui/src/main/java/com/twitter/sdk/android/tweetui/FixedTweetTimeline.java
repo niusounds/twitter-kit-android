@@ -58,10 +58,12 @@ public class FixedTweetTimeline extends BaseTimeline implements Timeline<Tweet> 
         /**
          * Constructs a Builder.
          */
-        public Builder() {}
+        public Builder() {
+        }
 
         /**
          * Sets the Tweets to be returned by the timeline.
+         *
          * @param tweets fixed set of Tweets provided by the timeline.
          */
         public Builder setTweets(List<Tweet> tweets) {
@@ -71,6 +73,7 @@ public class FixedTweetTimeline extends BaseTimeline implements Timeline<Tweet> 
 
         /**
          * Builds a FixedTweetTimeline from the Builder parameters.
+         *
          * @return a FixedTweetTimeline.
          */
         public FixedTweetTimeline build() {

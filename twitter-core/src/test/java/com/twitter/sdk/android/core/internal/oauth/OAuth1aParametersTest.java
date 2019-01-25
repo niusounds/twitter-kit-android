@@ -31,7 +31,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
 @SuppressWarnings("checkstyle:linelength")
-public class OAuth1aParametersTest  {
+public class OAuth1aParametersTest {
 
     private static class TestParameters {
         public final String method;
@@ -49,10 +49,10 @@ public class OAuth1aParametersTest  {
         public final String expectedAuthHeader;
 
         TestParameters(String method, String url, Map<String, String> postParams,
-                String consumerKey, String consumerSecret, String callback, String nonce,
-                String timestamp, String token, String tokenSecret,
-                String expectedSignatureBase, String expectedSignature,
-                String expectedAuthHeader) {
+                       String consumerKey, String consumerSecret, String callback, String nonce,
+                       String timestamp, String token, String tokenSecret,
+                       String expectedSignatureBase, String expectedSignature,
+                       String expectedAuthHeader) {
             this.method = method;
             this.url = url;
             this.postParams = postParams;
@@ -69,7 +69,7 @@ public class OAuth1aParametersTest  {
         }
     }
 
-    private static final TestParameters[] TEST_PARAMETERS = new TestParameters[] {
+    private static final TestParameters[] TEST_PARAMETERS = new TestParameters[]{
             // tokens/secrets (disabled) from https://dev.twitter.com/web/sign-in/implementing
             new TestParameters(
                     "POST",

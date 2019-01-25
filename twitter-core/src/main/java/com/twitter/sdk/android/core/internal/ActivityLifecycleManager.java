@@ -37,13 +37,26 @@ public class ActivityLifecycleManager {
      * Override the methods corresponding to the activity.
      */
     public abstract static class Callbacks {
-        public void onActivityCreated(Activity activity, Bundle bundle) {}
-        public void onActivityStarted(Activity activity) {}
-        public void onActivityResumed(Activity activity) {}
-        public void onActivityPaused(Activity activity) {}
-        public void onActivityStopped(Activity activity) {}
-        public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {}
-        public void onActivityDestroyed(Activity activity) {}
+        public void onActivityCreated(Activity activity, Bundle bundle) {
+        }
+
+        public void onActivityStarted(Activity activity) {
+        }
+
+        public void onActivityResumed(Activity activity) {
+        }
+
+        public void onActivityPaused(Activity activity) {
+        }
+
+        public void onActivityStopped(Activity activity) {
+        }
+
+        public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+        }
+
+        public void onActivityDestroyed(Activity activity) {
+        }
     }
 
     /**
@@ -121,7 +134,7 @@ public class ActivityLifecycleManager {
 
                             @Override
                             public void onActivitySaveInstanceState(Activity activity,
-                                    Bundle bundle) {
+                                                                    Bundle bundle) {
                                 callbacks.onActivitySaveInstanceState(activity, bundle);
                             }
 

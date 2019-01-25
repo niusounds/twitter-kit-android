@@ -32,7 +32,7 @@ public class TwitterConfig {
     final Boolean debug;
 
     private TwitterConfig(Context context, Logger logger, TwitterAuthConfig twitterAuthConfig,
-            ExecutorService executorService, Boolean debug) {
+                          ExecutorService executorService, Boolean debug) {
         this.context = context;
         this.logger = logger;
         this.twitterAuthConfig = twitterAuthConfig;
@@ -42,7 +42,7 @@ public class TwitterConfig {
 
     /**
      * Builder for creating {@link TwitterConfig} instances.
-     * */
+     */
     public static class Builder {
         private final Context context;
         private Logger logger;
