@@ -20,8 +20,8 @@ apply from: rootProject.file('dependencies.gradle')
 subprojects { Project subproject ->
     buildscript {
         repositories {
-            jcenter()
             google()
+            jcenter()
             maven { url 'https://maven.fabric.io/public' }
         }
         dependencies {

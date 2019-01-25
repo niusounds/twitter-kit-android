@@ -20,6 +20,7 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion rootProject.compileSdkVersion
 
+
     defaultConfig {
         versionCode 1
         versionName version
@@ -40,10 +41,6 @@ android {
             buildConfigField "String", "ARTIFACT_ID", "\"${pom_artifact_id}\""
             buildConfigField "long", "BUILD_TIME", "${System.currentTimeMillis()}L"
         }
-    }
-
-    lintOptions {
-        warningsAsErrors true
     }
 
     compileOptions {

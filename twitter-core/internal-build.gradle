@@ -71,22 +71,10 @@ android {
 }
 
 dependencies {
-    api dependency.retrofit
-    implementation dependency.retrofitGsonConverter
-    api dependency.gson
-    api dependency.okHttp
-
-    androidTestCompile dependency.mockito
-    androidTestCompile dependency.dexmakerMockito
-
-    testCompile dependency.mockito
-    testCompile dependency.junit
-    testCompile dependency.retrofitMock
-    testCompile(dependency.robolectric) {
-        exclude group: 'commons-logging', module: 'commons-logging'
-        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
-    }
-    testCompile dependency.equalsVerifier
+    api "com.squareup.retrofit2:retrofit:2.5.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.squareup.okhttp3:okhttp:3.12.1'
 }
 
 apply from: rootProject.deployScript

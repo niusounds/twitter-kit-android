@@ -89,14 +89,8 @@ dependencies {
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-    implementation deps.support.design
-    implementation deps.support.compat
-
-    testImplementation deps.test.hamcrest
-
-    testImplementation deps.junit
-    androidTestImplementation deps.atsl.runner
-    androidTestImplementation deps.espresso.core
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "androidx.appcompat:appcompat:1.0.2"
 }
 
 apply from: rootProject.deployScript
