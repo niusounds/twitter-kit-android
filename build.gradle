@@ -15,24 +15,20 @@
  *
  */
 
-subprojects { Project subproject ->
+subprojects { subproject ->
     buildscript {
         repositories {
             google()
-            jcenter()
+            mavenCentral()
         }
         dependencies {
-            classpath 'com.android.tools.build:gradle:3.0.0'
+            classpath 'com.android.tools.build:gradle:7.0.0-alpha15'
         }
     }
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.2.1'
 }
 

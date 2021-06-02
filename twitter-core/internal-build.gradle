@@ -57,10 +57,10 @@ android {
 }
 
 dependencies {
-    api "com.squareup.retrofit2:retrofit:2.5.0"
-    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
-    api 'com.google.code.gson:gson:2.8.5'
-    api 'com.squareup.okhttp3:okhttp:3.12.1'
+    api "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    api 'com.google.code.gson:gson:2.8.6'
+    api 'com.squareup.okhttp3:okhttp:4.9.1'
 }
 
 apply from: rootProject.deployScript
