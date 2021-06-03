@@ -50,6 +50,19 @@ android {
     }
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+            debug(MavenPublication) {
+                from components.debug
+            }
+        }
+    }
+}
+
 dependencies {
     api "com.squareup.retrofit2:retrofit:2.9.0"
     api "com.squareup.retrofit2:converter-gson:2.9.0"
