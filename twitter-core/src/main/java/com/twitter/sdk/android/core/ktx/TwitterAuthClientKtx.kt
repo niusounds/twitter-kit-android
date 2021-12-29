@@ -10,6 +10,13 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
+/**
+ * Requests authorization.
+ * Do not forget to override `Activity.onActivityResult`
+ * and pass arguments to [TwitterAuthClient.onActivityResult].
+ *
+ * @param activity The {@link android.app.Activity} context to use for the authorization flow.
+ */
 suspend fun TwitterAuthClient.authorize(activity: Activity): TwitterSession =
     suspendCoroutine { continuation ->
         authorize(activity, object : Callback<TwitterSession>() {
