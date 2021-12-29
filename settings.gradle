@@ -17,3 +17,4 @@
 
 include ':twitter-core'
 include ':tweet-ui'
+include ':sample'
