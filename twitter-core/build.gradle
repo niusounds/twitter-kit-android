@@ -19,12 +19,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
 
     defaultConfig {
-        versionCode 1
-        versionName version
         minSdkVersion 21
         consumerProguardFiles 'proguard.txt'
     }

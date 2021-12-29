@@ -14,21 +14,23 @@
  * limitations under the License.
  *
  */
-
-subprojects { subproject ->
-    buildscript {
-        repositories {
-            google()
-            mavenCentral()
-        }
-        dependencies {
-            classpath 'com.android.tools.build:gradle:7.0.0-alpha15'
-        }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+    }
+}
 
+allprojects {
     repositories {
         google()
         mavenCentral()
     }
 }
 
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
