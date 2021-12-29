@@ -15,6 +15,15 @@
  *
  */
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "twitter-kit-android"
 include ':twitter-core'
 include ':tweet-ui'
 include ':sample'
