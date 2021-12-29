@@ -18,9 +18,9 @@ android {
             useSupportLibrary true
         }
         // Please define environment variable
-        // ORG_GRADLE_PROJECT_TWITTER_CONSUMER_KEY and ORG_GRADLE_PROJECT_TWITTER_CONSUMER_SECRET
-        resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", TWITTER_CONSUMER_KEY
-        resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", TWITTER_CONSUMER_SECRET
+        // TWITTER_CONSUMER_KEY and TWITTER_CONSUMER_SECRET
+        resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", System.getenv("TWITTER_CONSUMER_KEY") ?: ""
+        resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", System.getenv("TWITTER_CONSUMER_SECRET") ?: ""
     }
 
     buildTypes {
