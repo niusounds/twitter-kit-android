@@ -1,5 +1,11 @@
 [![](https://jitpack.io/v/makarenkoanton/twitter-kit-android.svg)](https://jitpack.io/#makarenkoanton/twitter-kit-android)
 
+**This repository removes almost features except `twitter-core` from original TwitterKit. DO NOT USE THIS REPOSITORY IF YOU WANT TO USE FEATURES SUCH AS `tweet-composer`,`twitter-mopub` and `twitter-ui`.**
+
+---
+
+original README for reference
+
 # Twitter Kit for Android
 
 Twitter Kit is a multi-module gradle project containing several Twitter SDKs including TweetComposer, TwitterCore, and TweetUi. Twitter Kit is designed to make interacting with Twitter seamless and efficient.
