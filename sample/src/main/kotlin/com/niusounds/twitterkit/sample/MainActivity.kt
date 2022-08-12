@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
                 MainScreen(
                     onLogin = {
                         scope.launch {
-                            val session = client.authorize(this@MainActivity)
+                            val session = client.authorize(this@MainActivity, useSsoFirst = false)
                             Toast.makeText(
                                 applicationContext,
                                 "Hello ${session.userName}",
