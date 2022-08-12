@@ -77,7 +77,7 @@ public class TwitterAuthClient {
      * @param callback The callback interface to invoke when authorization completes.
      * @throws java.lang.IllegalArgumentException if activity or callback is null.
      */
-    public void authorize(Activity activity, Callback<TwitterSession> callback) {
+    public void authorize(Activity activity, Boolean useSsoFirst, Callback<TwitterSession> callback) {
         if (activity == null) {
             throw new IllegalArgumentException("Activity must not be null.");
         }
@@ -89,13 +89,13 @@ public class TwitterAuthClient {
             Twitter.getLogger()
                     .e(TwitterCore.TAG, "Cannot authorize, activity is finishing.", null);
         } else {
-            handleAuthorize(activity, callback);
+            handleAuthorize(activity, useSsoFirst, callback);
         }
     }
 
-    private void handleAuthorize(Activity activity, Callback<TwitterSession> callback) {
+    private void handleAuthorize(Activity activity, Boolean useSsoFirst, Callback<TwitterSession> callback) {
         final CallbackWrapper callbackWrapper = new CallbackWrapper(sessionManager, callback);
-        if (!authorizeUsingSSO(activity, callbackWrapper)
+        if ((!(useSsoFirst && authorizeUsingSSO(activity, callbackWrapper)))
                 && !authorizeUsingOAuth(activity, callbackWrapper)) {
             callbackWrapper.failure(new TwitterAuthException("Authorize failed."));
         }

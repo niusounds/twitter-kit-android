@@ -161,7 +161,7 @@ public class TwitterLoginButton extends Button {
             checkCallback(callback);
             checkActivity(activityRef.get());
 
-            getTwitterAuthClient().authorize(activityRef.get(), callback);
+            getTwitterAuthClient().authorize(activityRef.get(), true, callback);
 
             if (onClickListener != null) {
                 onClickListener.onClick(view);
