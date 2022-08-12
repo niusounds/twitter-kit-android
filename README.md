@@ -23,6 +23,10 @@ dependencies {
 }
 ```
 
+## How to develop
+
+To launch sample app, environment variable `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` are required. See [sample/build.gradle](https://github.com/niusounds/twitter-kit-android/blob/master/sample/build.gradle). Create your own keys in [Twitter's developer portal](https://developer.twitter.com/).
+
 ---
 
 original README for reference
