@@ -6,14 +6,23 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.lifecycleScope
 import com.twitter.sdk.android.core.DefaultLogger
 import com.twitter.sdk.android.core.identity.TwitterAuthClient
 import com.twitter.sdk.android.core.ktx.authorize
@@ -27,9 +36,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         initTwitter()
         setContent {
+            var token by remember { mutableStateOf("") }
+            val scope = rememberCoroutineScope()
             MaterialTheme {
                 MainScreen(
-                    onLogin = ::onLogin
+                    onLogin = {
+                        scope.launch {
+                            val session = client.authorize(this@MainActivity)
+                            Toast.makeText(
+                                applicationContext,
+                                "Hello ${session.userName}",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            token = session.authToken.token
+                        }
+                    },
+                    token = token,
                 )
             }
         }
@@ -42,13 +64,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun onLogin() {
-        lifecycleScope.launch {
-            val session = client.authorize(this@MainActivity)
-            Toast.makeText(applicationContext, "Hello ${session.userName}", Toast.LENGTH_SHORT).show()
-        }
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         client.onActivityResult(requestCode, resultCode, data)
@@ -58,6 +73,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen(
     onLogin: () -> Unit,
+    token: String,
 ) {
     Scaffold(
         topBar = {
@@ -68,12 +84,19 @@ fun MainScreen(
             )
         }
     ) {
-        Box(modifier = Modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
             Button(
                 onClick = onLogin,
-                modifier = Modifier.align(Alignment.Center),
             ) {
                 Text(text = "Login with Twitter")
+            }
+
+            if (token.isNotEmpty()) {
+                Text(text = "token: $token")
             }
         }
     }
@@ -85,6 +108,7 @@ fun PreviewMainScreen() {
     MaterialTheme {
         MainScreen(
             onLogin = {},
+            token = ""
         )
     }
 }
