@@ -1,6 +1,27 @@
-[![](https://jitpack.io/v/makarenkoanton/twitter-kit-android.svg)](https://jitpack.io/#makarenkoanton/twitter-kit-android)
+[![](https://jitpack.io/v/niusounds/twitter-kit-android.svg)](https://jitpack.io/#niusounds/twitter-kit-android)
 
 **This repository removes almost features except `twitter-core` from original TwitterKit. DO NOT USE THIS REPOSITORY IF YOU WANT TO USE FEATURES SUCH AS `tweet-composer`,`twitter-mopub` and `twitter-ui`.**
+
+## How to use
+
+Add `jitpack` maven repository to `settings.gradle`
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven("https://jitpack.io")
+    }
+}
+```
+
+Add the dependency (`app/build.gradle`)
+
+```gradle
+dependencies {
+    implementation 'com.github.niusounds:twitter-kit-android:4.0.1'
+}
+```
 
 ---
 
