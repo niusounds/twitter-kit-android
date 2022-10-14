@@ -42,13 +42,22 @@ class MainActivity : ComponentActivity() {
                 MainScreen(
                     onLogin = {
                         scope.launch {
-                            val session = client.authorize(this@MainActivity, useSsoFirst = false)
-                            Toast.makeText(
-                                applicationContext,
-                                "Hello ${session.userName}",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            token = session.authToken.token
+                            runCatching {
+                                val session =
+                                    client.authorize(this@MainActivity, useSsoFirst = true)
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Hello ${session.userName}",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                token = session.authToken.token
+                            }.onFailure { e ->
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Error: ${e.message}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
                         }
                     },
                     token = token,
